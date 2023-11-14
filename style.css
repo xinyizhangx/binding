@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* reset margin and padding */
+html,
+div,
+body,
+h1,
+h2,
+p,
+ul,
+ol,
+li,
+legend,
+button,
+a,
+img,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ""; /*add a content*/
+  display: block; 
+  clear: both; /*clear*/
+}
+
+:root {
+  --color-base: #000;
+  --color-black: #000;
+  --background-base: #fff;
+  --base-size: 16px;
+  --font-weight: 400;
+  --font-inter: "Inter";
+  --font-Abril-Fatface: "Abril Fatface";
+  --font-Kaushan: "Kaushan Script";
+  --border-size: 1px;
+}
+
+html.dark {
+  --color-base: #fff;
+  --background-base: #000;
+}
+
+main {
+  width: 100%;
+  max-width: 1025px;
+  margin: 100px auto;
+  background: var(--background-base);
+}
+main header {
+  display: flex;
+  justify-content: space-between;
+}
+main header p {
+  font-family: var(--font-inter);
+  font-size: calc(1.6875 * var(--base-size));
+  line-height: calc(2 * var(--base-size));
+  font-weight: calc(1.25 * var(--font-weight));
+  color: var(--color-base);
+}
+
+main section.title {
+  font-size: calc(14.375 * var(--base-size));
+  line-height: calc(17.375 * var(--base-size));
+  font-weight: calc(2 * var(--font-weight));
+  font-family: var(--font-inter);
+  margin: calc(5 * var(--base-size)) 0;
+  color: var(--color-base);
+}
+
+main .divide {
+  height: calc(3 * var(--border-size));
+  background: var(--color-base);
+}
+
+main article {
+  font-size: calc(2.875 * var(--base-size));
+  line-height: calc(3.875 * var(--base-size));
+  font-family: var(--font-Abril-Fatface);
+  padding: calc(2.5 * var(--base-size)) 0;
+}
+
+main ul {
+  margin: calc(2.5 * var(--base-size)) 0;
+}
+main ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main ul li.right {
+  justify-content: flex-end;
+}
+
+main ul li a {
+  height: calc(5.625 * var(--base-size));
+  display: inline-block;
+  border: 2px solid;
+  border-radius: calc(2.8125 * var(--base-size));
+  font-family: var(--font-Abril-Fatface);
+  font-size: calc(2.5 * var(--base-size));
+  line-height: calc(5.625 * var(--base-size));
+  padding: 0 calc(2.25 * var(--base-size));
+  color: var(--color-base);
+  display: flex;
+  align-items: center;
+}
+
+main ul li i {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-right: calc(1 * var(--base-size));
+  background: var(--color-base);
+}
