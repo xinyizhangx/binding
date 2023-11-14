@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* reset margin and padding */
+html,
+div,
+body,
+h1,
+h2,
+p,
+ul,
+ol,
+li,
+legend,
+button,
+a,
+img,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:root {
+  --color-base: #000;
+  --color-black: #000;
+  --background-base: #fff;
+  --base-size: 16px;
+  --font-weight: 400;
+  --font-Kaushan: "Kaushan Script";
+  --font-Libre-Bodoni: "Libre Bodoni";
+  --font-Roboto: "Roboto";
+  --font-Ubuntu: "Ubuntu";
+  --font-Lato: "Lato";
+  --font-Pacifico: "Pacifico";
+  --border-size: 1px;
+  --basic-size: 10px;
+}
+
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 100px auto;
+  background: var(--background-base);
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main header p {
+  font-family: var(--font-inter);
+  font-size: calc(1.6875 * var(--base-size));
+  line-height: calc(2 * var(--base-size));
+  font-weight: calc(1.25 * var(--font-weight));
+  color: var(--color-base);
+}
+
+main section.title {
+  margin-bottom: calc(15 * var(--base-size));
+}
+
+main section.title p.publish {
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(1.5625 * var(--base-size));
+  line-height: calc(2 * var(--base-size));
+  font-style: italic;
+  color: #157a68;
+  margin-top: calc(10 * var(--base-size));
+  font-family: var(--font-Libre-Bodoni);
+}
+
+main section.title p.author {
+  text-align: right;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-style: italic;
+  font-size: calc(1.5625 * var(--base-size));
+  line-height: calc(2 * var(--base-size));
+  color: #32aef8;
+  font-family: var(--font-Roboto);
+}
+
+main section.title p.author span {
+  text-decoration: underline;
+}
+
+main section.title p.left, main section.title p.right {
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(11.875 * var(--base-size));
+  line-height: calc(10 * var(--base-size));
+}
+
+main section.title p.right {
+  text-align: right;
+  margin-bottom: calc(3.5 * var(--base-size));
+}
+
+main section.chapters .head {
+  font-weight: calc(1.25 * var(--font-weight));
+  font-size: calc(4.375 * var(--base-size));
+  line-height: calc(5 * var(--base-size));
+  font-family: var(--font-Ubuntu);
+  text-align: center;
+}
+
+main section.chapter {
+  margin-top: calc(30 * var(--basic-size));
+  position: relative;
+}
+
+main section.chapter.chapter1 {
+  margin-left: calc(12.8 * var(--basic-size));
+}
+
+main section.chapter.chapter1 article {
+  width: 709px;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(1.875 * var(--base-size));
+  line-height: calc(2.25 * var(--base-size));
+  font-family: var(--font-Lato);
+  padding-top: calc(12 * var(--basic-size));
+}
+
+main section.chapter.chapter1 .title {
+  position: absolute;
+  top: calc(-2 * var(--basic-size));
+  right: calc(8 * var(--basic-size));
+}
+
+main section.chapter.chapter1 .title p {
+  font-size: calc(11 * var(--basic-size));
+  line-height: calc(19.3 * var(--basic-size));
+  color: #157a68;
+  font-family: var(--font-Libre-Bodoni);
+}
+
+main section.chapter.chapter1 .title .right {
+  text-align: right;
+}
+
+main section.chapter.chapter1 .no {
+  font-size: calc(12 * var(--basic-size));
+  line-height: calc(15 * var(--basic-size));
+  color: #157a68;
+  font-family: var(--font-Libre-Bodoni);
+  position: absolute;
+  bottom: calc(10.5 * var(--basic-size));
+  right: calc(7 * var(--basic-size));
+}
+
+main section.chapter.chapter2 {
+  margin-left: calc(25.6 * var(--basic-size));
+}
+
+main section.chapter.chapter2 article {
+  width: 899px;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(2.5 * var(--basic-size));
+  line-height: calc(3 * var(--basic-size));
+  font-family: var(--font-Lato);
+  padding-top: calc(3 * var(--basic-size));
+}
+
+main section.chapter.chapter2 .title {
+  position: absolute;
+  left: calc(-13 * var(--basic-size));
+  top: calc(-5 * var(--basic-size));
+}
+
+main section.chapter.chapter2 .title p {
+  font-size: calc(12.8 * var(--basic-size));
+  color: #fa5f09;
+  font-family: var(--font-Pacifico);
+  line-height: calc(20 * var(--basic-size));
+}
+
+main section.chapter.chapter2 .no {
+  font-size: calc(12 * var(--basic-size));
+  line-height: calc(15 * var(--basic-size));
+  color: #fa5f09;
+  font-family: var(--font-Libre-Bodoni);
+  position: absolute;
+  bottom: calc(-6 * var(--basic-size));
+  right: calc(12 * var(--basic-size));
+}
+
+main section.chapter.chapter3 {
+  margin-left: calc(12.8 * var(--basic-size));
+}
+
+main section.chapter.chapter3 article {
+  width: 768px;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(2.5 * var(--basic-size));
+  line-height: calc(3 * var(--basic-size));
+  font-family: var(--font-Lato);
+  padding-top: calc(12 * var(--basic-size));
+}
+
+main section.chapter.chapter3 .title {
+  position: absolute;
+  bottom: calc(-4 * var(--basic-size));
+  right: calc(6 * var(--basic-size));
+}
+
+main section.chapter.chapter3 .title p {
+  font-size: calc(12 * var(--basic-size));
+  color: #32aef8;
+  font-family: var(--font-Pacifico);
+  line-height: calc(13 * var(--basic-size));
+}
+
+main section.chapter.chapter3 .no {
+  font-size: calc(14 * var(--basic-size));
+  line-height: calc(17.5 * var(--basic-size));
+  color: #33aff9;
+  font-family: var(--font-Libre-Bodoni);
+  position: absolute;
+  top: calc(-3 * var(--basic-size));
+  left: calc(0 * var(--basic-size));
+}
+
+main section.chapter.chapter4 {
+  margin-left: calc(25.6 * var(--basic-size));
+  margin-top: calc(50 * var(--basic-size));
+}
+
+main section.chapter.chapter4 article {
+  width: 899px;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(2.5 * var(--basic-size));
+  line-height: calc(3 * var(--basic-size));
+  font-family: var(--font-Lato);
+  color: #157a68;
+  padding-top: calc(20 * var(--basic-size));
+}
+
+main section.chapter.chapter4 .title {
+  position: absolute;
+  top: calc(-2 * var(--basic-size));
+  left: calc(-13 * var(--basic-size));
+}
+
+main section.chapter.chapter4 .title p {
+  font-size: calc(9 * var(--basic-size));
+  color: #000;
+  font-family: var(--font-Pacifico);
+  line-height: calc(12 * var(--basic-size));
+}
+
+main section.chapter.chapter4 .no {
+  font-size: calc(11 * var(--basic-size));
+  line-height: calc(13.75 * var(--basic-size));
+  color: #000;
+  font-family: var(--font-Libre-Bodoni);
+  position: absolute;
+  bottom: calc(-12 * var(--basic-size));
+  right: calc(15 * var(--basic-size));
+}
+
+main section.chapter.chapter5 {
+  margin-left: calc(12.8 * var(--basic-size));
+  margin-top: calc(50 * var(--basic-size));
+}
+
+main section.chapter.chapter5 article {
+  width: 768px;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(2.5 * var(--basic-size));
+  line-height: calc(3 * var(--basic-size));
+  font-family: var(--font-Lato);
+  padding-top: calc(12 * var(--basic-size));
+}
+
+main section.chapter.chapter5 .title {
+  position: absolute;
+  top: calc(-2 * var(--basic-size));
+  right: calc(2 * var(--basic-size));
+}
+
+main section.chapter.chapter5 .title p {
+  font-size: calc(12 * var(--basic-size));
+  color: #e2cc9a;
+  font-family: var(--font-Pacifico);
+  line-height: calc(21 * var(--basic-size));
+}
+
+main section.chapter.chapter5 .no {
+  font-size: calc(11 * var(--basic-size));
+  line-height: calc(13.75 * var(--basic-size));
+  color: #e2cc9a;
+  font-family: var(--font-Libre-Bodoni);
+  position: absolute;
+  bottom: calc(-10 * var(--basic-size));
+  right: calc(28 * var(--basic-size));
+}
+
+main section.chapter.chapter6 {
+  margin-left: calc(38.6 * var(--basic-size));
+  margin-top: calc(50 * var(--basic-size));
+}
+
+main section.chapter.chapter6 article {
+  width: 768px;
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(2.5 * var(--basic-size));
+  line-height: calc(3 * var(--basic-size));
+  font-family: var(--font-Lato);
+  color: #2b5fcf;
+}
+
+main section.chapter.chapter6 .title {
+  position: absolute;
+  top: calc(-19 * var(--basic-size));
+  left: calc(-37 * var(--basic-size));
+}
+
+main section.chapter.chapter6 .title p {
+  font-size: calc(8 * var(--basic-size));
+  color: #b5b5b5;
+  font-family: var(--font-Pacifico);
+  line-height: calc(10 * var(--basic-size));
+}
+
+main section.chapter.chapter6 .no {
+  font-size: calc(11 * var(--basic-size));
+  line-height: calc(13.75 * var(--basic-size));
+  color: #cacaca;
+  font-family: var(--font-Libre-Bodoni);
+  position: absolute;
+  bottom: calc(-2 * var(--basic-size));
+  left: calc(-37 * var(--basic-size));
+}
+
+main ul {
+  margin-top: calc(5 * var(--basic-size));
+  border-bottom: 2px solid;
+}
+
+main ul li {
+  border-top: 2px solid;
+  display: flex;
+  align-items: center;
+  padding: calc(2 * var(--basic-size)) calc(5 * var(--basic-size));
+}
+
+main ul li a {
+  font-family: var(--font-Roboto);
+  font-weight: calc(1.75 * var(--font-weight));
+}
+
+main ul li a:hover {
+  text-decoration: none;
+}
+
+main ul li a i {
+  font-size: calc(3.75 * var(--base-size));
+  line-height: calc(4.375 * var(--base-size));
+  margin-right: calc(5 * var(--basic-size));
+}
+
+main ul li a span {
+  font-size: calc(2.4375 * var(--base-size));
+  line-height: calc(2.875 * var(--base-size));
+  text-transform: uppercase;
+}
