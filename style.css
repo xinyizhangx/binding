@@ -110,7 +110,7 @@ main .divide {
 }
 
 main article {
-  font-size: calc(2.875 * var(--base-size));
+  font-size: calc(2.25* var(--base-size));
   line-height: calc(3.875 * var(--base-size));
   font-family: var(--font-Abril-Fatface);
   padding: calc(2.5 * var(--base-size)) 0;
