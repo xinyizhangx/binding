@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -60,16 +62,28 @@ a:hover {
   clear: both; /*clear*/
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 :root {
   --color-base: #000;
   --color-black: #000;
   --background-base: #fff;
-  --base-size: 16px;
-  --font-weight: 400;
   --font-inter: "Inter";
   --font-Abril-Fatface: "Abril Fatface";
   --font-Kaushan: "Kaushan Script";
+  --font-JacquesFrancoisShadow: "Jacques Francois Shadow";
+  --base-size: 16px;
+  --font-weight: 400;
   --border-size: 1px;
+  --basic-size: 10px;
 }
 
 html.dark {
@@ -83,16 +97,29 @@ main {
   margin: 100px auto;
   background: var(--background-base);
 }
+
 main header {
   display: flex;
   justify-content: space-between;
 }
+
 main header p {
   font-family: var(--font-inter);
   font-size: calc(1.6875 * var(--base-size));
   line-height: calc(2 * var(--base-size));
   font-weight: calc(1.25 * var(--font-weight));
   color: var(--color-base);
+}
+
+main nav{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-top:cal(5*var(--basic-size));
+}
+
+main nav.title p{
+  font-family: var(--font-inter);
 }
 
 main section.title {
