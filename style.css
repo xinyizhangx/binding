@@ -118,7 +118,7 @@ main nav{
   margin-top:cal(5*var(--basic-size));
 }
 
-main nav.title p{
+main nav.title h2{
   font-family: var(--font-inter);
 }
 
