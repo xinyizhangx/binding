@@ -19,6 +19,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
 
 
 * {
@@ -58,6 +59,7 @@ h6 {
   --color-blue: #3c87f8;
   --font-inter: "Inter";
   --font-JacquesFrancoisShadow: "Jacques Francois Shadow";
+  --font-Judson:"Judson";
   --font-Abril-Fatface: "Abril Fatface";
   --font-Silkscreen: "Silkscreen";
   --font-Acme: "Acme";
