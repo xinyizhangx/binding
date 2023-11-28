@@ -22,10 +22,8 @@ a {
 }
 
 a:hover {
-  text-decoration:underline;
-  text-decoration-style:solid;
-  text-decoration-thickness:2px;
-  color:#b5b5b5;
+  text-decoration: underline;
+  color: #b5b5b5;
 }
 
 h1,
@@ -46,13 +44,14 @@ h6 {
   --font-Libre-Bodoni: "Libre Bodoni";
   --font-Roboto: "Roboto";
   --font-Ubuntu: "Ubuntu";
+  --font-Spirax:"Spirax";
   --font-Lato: "Lato";
   --font-Pacifico: "Pacifico";
-  --font-Spirax:"Spirax";
   --base-size: 16px;
   --font-weight: 400;
   --border-size: 1px;
   --basic-size: 10px;
+  --sm-font-size: 14px;
 }
 
 .dot::before {
@@ -68,17 +67,19 @@ h6 {
 
 main {
   width: 100%;
+  max-width: 100%;
   margin: 100px auto;
   background: var(--background-base);
 }
 main header {
   display: flex;
   justify-content: space-between;
+  padding: 0 calc(2 * var(--basic-size));
 }
 main header p {
   font-family: var(--font-inter);
-  font-size: calc(1.6875 * var(--base-size));
-  line-height: calc(2 * var(--base-size));
+  font-size: calc(1 * var(--sm-font-size));
+  line-height: calc(1.25 * var(--sm-font-size));
   font-weight: calc(1.25 * var(--font-weight));
   color: var(--color-base);
 }
@@ -86,19 +87,36 @@ main nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: calc(2 * var(--basic-size));
+  padding-right: calc(1 * var(--basic-size));
   margin-top: calc(5 * var(--basic-size));
 }
 main nav .title h2 {
   font-family: var(--font-inter);
+  font-size: calc(1.8 * var(--sm-font-size));
+  line-height: calc(2.2 * var(--sm-font-size));
+}
+main nav .title h2.dot {
+  transform: translateY(calc(-1 * var(--sm-font-size)));
+}
+main nav .menus ul li {
+  width: calc(13.5 * var(--basic-size));
+  height: calc(4 * var(--basic-size));
 }
 main nav .menus ul li.dot::before {
   background: var(--color-base);
 }
 main nav .menus ul li a {
   color: var(--color-base);
+  font-size: calc(1.8 * var(--sm-font-size));
+  line-height: calc(2.2 * var(--sm-font-size));
+}
+main nav .menus ul li.right {
+  text-align: right;
 }
 main section.title {
   margin: calc(12 * var(--base-size)) 0;
+  padding: 0 calc(2 * var(--basic-size));
 }
 main section.title p.publish {
   font-weight: calc(1.75 * var(--font-weight));
@@ -106,6 +124,8 @@ main section.title p.publish {
   color: #157a68;
   margin-bottom: calc(2 * var(--base-size));
   font-family: var(--font-Libre-Bodoni);
+  font-size: calc(1.25 * var(--sm-font-size));
+  line-height: calc(1.6 * var(--sm-font-size));
 }
 main section.title p.author {
   text-align: right;
@@ -115,36 +135,47 @@ main section.title p.author a {
   font-style: italic;
   color: #32aef8;
   font-family: var(--font-Roboto);
+  font-size: calc(1.25 * var(--sm-font-size));
+  line-height: calc(1.6 * var(--sm-font-size));
 }
 main section.title p.left, main section.title p.right {
   font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(4.5 * var(--sm-font-size));
+  line-height: calc(5 * var(--sm-font-size));
 }
 main section.title p.right {
   text-align: right;
   margin-bottom: calc(3.5 * var(--base-size));
-  font-family:var(--font-Spirax) ;
+  font-family: --font--Spirax;
 }
 main section.chapters .head {
   font-weight: calc(1.25 * var(--font-weight));
   font-family: var(--font-Ubuntu);
+  font-size: calc(2.25 * var(--sm-font-size));
+  line-height: calc(2.5 * var(--sm-font-size));
+  padding: 0 calc(2 * var(--basic-size));
 }
 main section.chapter {
-  margin-top: calc(30 * var(--basic-size));
+  margin-top: calc(15 * var(--basic-size));
   position: relative;
 }
-
 main section.chapter .title {
   position: absolute;
 }
 main section.chapter .title p {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 main section.chapter .no {
-  opacity: 0.4;
+  opacity: 0.3;
   position: absolute;
 }
-main section.chapter.chapter1 {
-  margin-left: calc(12.8 * var(--basic-size));
+main section.chapter.chapter1, main section.chapter.chapter2, main section.chapter.chapter3, main section.chapter.chapter4, main section.chapter.chapter5, main section.chapter.chapter6 {
+  padding: 0 calc(2 * var(--basic-size));
+}
+main section.chapter.chapter1 article, main section.chapter.chapter2 article, main section.chapter.chapter3 article, main section.chapter.chapter4 article, main section.chapter.chapter5 article, main section.chapter.chapter6 article {
+  width: 100%;
+  font-size: calc(1 * var(--base-size));
+  line-height: calc(1.25 * var(--base-size));
 }
 main section.chapter.chapter1 article {
   font-weight: calc(1.75 * var(--font-weight));
@@ -152,12 +183,15 @@ main section.chapter.chapter1 article {
   padding-top: calc(12 * var(--basic-size));
 }
 main section.chapter.chapter1 .title {
-  top: calc(-2 * var(--basic-size));
-  right: calc(8 * var(--basic-size));
+  top: calc(0 * var(--basic-size));
+  right: calc(0 * var(--basic-size));
+  width: 80%;
 }
 main section.chapter.chapter1 .title p {
   color: #157a68;
   font-family: var(--font-Libre-Bodoni);
+  font-size: calc(3 * var(--sm-font-size));
+  line-height: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter1 .title .right {
   text-align: right;
@@ -165,11 +199,9 @@ main section.chapter.chapter1 .title .right {
 main section.chapter.chapter1 .no {
   color: #157a68;
   font-family: var(--font-Libre-Bodoni);
-  bottom: calc(10.5 * var(--basic-size));
-  right: calc(7 * var(--basic-size));
-}
-main section.chapter.chapter2 {
-  margin-left: calc(25.6 * var(--basic-size));
+  font-size: calc(3 * var(--basic-size));
+  bottom: calc(-2 * var(--basic-size));
+  right: calc(5 * var(--basic-size));
 }
 main section.chapter.chapter2 article {
   font-weight: calc(1.75 * var(--font-weight));
@@ -177,21 +209,22 @@ main section.chapter.chapter2 article {
   padding-top: calc(3 * var(--basic-size));
 }
 main section.chapter.chapter2 .title {
-  left: calc(-13 * var(--basic-size));
-  top: calc(-5 * var(--basic-size));
+  left: calc(2 * var(--basic-size));
+  top: calc(-2 * var(--basic-size));
+  width: 80%;
 }
 main section.chapter.chapter2 .title p {
   color: #fa5f09;
   font-family: var(--font-Pacifico);
+  font-size: calc(3 * var(--sm-font-size));
+  line-height: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter2 .no {
   color: #fa5f09;
   font-family: var(--font-Libre-Bodoni);
   bottom: calc(-6 * var(--basic-size));
   right: calc(12 * var(--basic-size));
-}
-main section.chapter.chapter3 {
-  margin-left: calc(12.8 * var(--basic-size));
+  font-size: calc(3 * var(--basic-size));
 }
 main section.chapter.chapter3 article {
   font-weight: calc(1.75 * var(--font-weight));
@@ -199,22 +232,24 @@ main section.chapter.chapter3 article {
   padding-top: calc(12 * var(--basic-size));
 }
 main section.chapter.chapter3 .title {
-  bottom: calc(-4 * var(--basic-size));
+  bottom: calc(-6 * var(--basic-size));
   right: calc(6 * var(--basic-size));
 }
 main section.chapter.chapter3 .title p {
   color: #32aef8;
   font-family: var(--font-Pacifico);
+  font-size: calc(3 * var(--sm-font-size));
+  line-height: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter3 .no {
   color: #33aff9;
   font-family: var(--font-Libre-Bodoni);
-  top: calc(-3 * var(--basic-size));
-  left: calc(0 * var(--basic-size));
+  top: calc(0 * var(--basic-size));
+  left: calc(4 * var(--basic-size));
+  font-size: calc(3 * var(--basic-size));
 }
 main section.chapter.chapter4 {
-  margin-left: calc(25.6 * var(--basic-size));
-  margin-top: calc(50 * var(--basic-size));
+  margin-top: calc(10 * var(--basic-size));
 }
 main section.chapter.chapter4 article {
   font-weight: calc(1.75 * var(--font-weight));
@@ -223,22 +258,24 @@ main section.chapter.chapter4 article {
   padding-top: calc(20 * var(--basic-size));
 }
 main section.chapter.chapter4 .title {
-  top: calc(-2 * var(--basic-size));
-  left: calc(-13 * var(--basic-size));
+  top: calc(10 * var(--basic-size));
+  left: calc(3 * var(--basic-size));
 }
 main section.chapter.chapter4 .title p {
   color: #000;
   font-family: var(--font-Pacifico);
+  font-size: calc(3 * var(--sm-font-size));
+  line-height: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter4 .no {
   color: #000;
   font-family: var(--font-Libre-Bodoni);
-  bottom: calc(-7 * var(--basic-size));
+  bottom: calc(-3 * var(--basic-size));
   right: calc(15 * var(--basic-size));
+  font-size: calc(3 * var(--basic-size));
 }
 main section.chapter.chapter5 {
-  margin-left: calc(12.8 * var(--basic-size));
-  margin-top: calc(50 * var(--basic-size));
+  margin-top: calc(10 * var(--basic-size));
 }
 main section.chapter.chapter5 article {
   font-weight: calc(1.75 * var(--font-weight));
@@ -246,22 +283,24 @@ main section.chapter.chapter5 article {
   padding-top: calc(12 * var(--basic-size));
 }
 main section.chapter.chapter5 .title {
-  top: calc(-2 * var(--basic-size));
+  top: calc(0 * var(--basic-size));
   right: calc(2 * var(--basic-size));
 }
 main section.chapter.chapter5 .title p {
   color: #e2cc9a;
   font-family: var(--font-Pacifico);
+  font-size: calc(3 * var(--sm-font-size));
+  line-height: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter5 .no {
   color: #e2cc9a;
   font-family: var(--font-Libre-Bodoni);
-  bottom: calc(-10 * var(--basic-size));
+  bottom: calc(-5 * var(--basic-size));
   right: calc(28 * var(--basic-size));
+  font-size: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter6 {
-  margin-left: calc(38.6 * var(--basic-size));
-  margin-top: calc(50 * var(--basic-size));
+  margin-top: calc(12 * var(--basic-size));
 }
 main section.chapter.chapter6 article {
   font-weight: calc(1.75 * var(--font-weight));
@@ -269,22 +308,25 @@ main section.chapter.chapter6 article {
   color: #2b5fcf;
 }
 main section.chapter.chapter6 .title {
-  top: calc(-19 * var(--basic-size));
-  left: calc(-37 * var(--basic-size));
+  top: calc(-3 * var(--basic-size));
+  left: calc(6 * var(--basic-size));
 }
 main section.chapter.chapter6 .title p {
   color: #b5b5b5;
   font-family: var(--font-Pacifico);
+  font-size: calc(3 * var(--sm-font-size));
+  line-height: calc(3 * var(--sm-font-size));
 }
 main section.chapter.chapter6 .no {
   color: #cacaca;
   font-family: var(--font-Libre-Bodoni);
-  bottom: calc(-2 * var(--basic-size));
-  left: calc(-37 * var(--basic-size));
+  bottom: calc(-4 * var(--basic-size));
+  left: calc(5 * var(--basic-size));
+  font-size: calc(3 * var(--sm-font-size));
 }
 main ul.sections {
   margin-top: calc(5 * var(--basic-size));
-  padding: 0 calc(10 * var(--basic-size));
+  padding: 0 calc(2 * var(--basic-size));
   display: flex;
   flex-wrap: wrap;
 }
@@ -293,9 +335,10 @@ main ul.sections li {
   align-items: center;
   width: 50%;
   flex-shrink: 0;
+  padding: calc(2 * var(--basic-size)) 0;
 }
 main ul.sections li .left {
-  margin-right: calc(2 * var(--basic-size));
+  margin-right: calc(1 * var(--basic-size));
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -310,10 +353,14 @@ main ul.sections li .left .circle {
 main ul.sections li .left i {
   display: inline-block;
   margin-top: calc(2 * var(--basic-size));
+  font-size: calc(2 * var(--sm-font-size));
+  line-height: calc(2 * var(--sm-font-size));
 }
 main ul.sections li a {
   font-family: var(--font-Roboto);
   font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(1.5 * var(--sm-font-size));
+  line-height: calc(2 * var(--sm-font-size));
   text-transform: uppercase;
 }
 main ul.sections li a:hover {
@@ -327,28 +374,342 @@ main footer {
   align-items: center;
   justify-content: flex-end;
   margin-top: calc(6 * var(--basic-size));
+  padding: 0 calc(2 * var(--basic-size));
 }
 main footer .block {
   background: #157a68;
   margin-right: calc(3 * var(--basic-size));
-  width: calc(3 * var(--basic-size));
-  height: calc(3 * var(--basic-size));
+  width: calc(1.5 * var(--basic-size));
+  height: calc(1.5 * var(--basic-size));
 }
 main footer a {
-  font-size: calc(2.7 * var(--basic-size));
+  font-size: calc(2 * var(--basic-size));
 }
 main footer a:hover {
   text-decoration: none;
 }
 
-/* --1280--px */
+/* --768px --*/
+@media screen and (min-width: 768px) {
+  :root {
+    --md-font-size: 16px;
+  }
+  main {
+    max-width: calc(75 * var(--basic-size));
+  }
+  main header {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main header p {
+    font-size: calc(1.5 * var(--md-font-size));
+    line-height: calc(2 * var(--md-font-size));
+  }
+  main nav {
+    padding-left: calc(5 * var(--basic-size));
+    padding-right: calc(2.5 * var(--basic-size));
+  }
+  main nav .title h2 {
+    font-size: calc(1.8 * var(--md-font-size));
+    line-height: calc(2.2 * var(--md-font-size));
+  }
+  main nav .title h2.dot {
+    transform: translateY(calc(-1 * var(--md-font-size)));
+  }
+  main nav .menus ul li {
+    width: calc(13.5 * var(--basic-size));
+    height: calc(4 * var(--basic-size));
+  }
+  main nav .menus ul li a {
+    font-size: calc(1.8 * var(--md-font-size));
+    line-height: calc(2.2 * var(--md-font-size));
+  }
+  main section.title {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.title p.publish {
+    font-size: calc(1.25 * var(--md-font-size));
+    line-height: calc(1.6 * var(--md-font-size));
+  }
+  main section.title p.author a {
+    font-size: calc(1.25 * var(--md-font-size));
+    line-height: calc(1.6 * var(--md-font-size));
+  }
+  main section.title p.left, main section.title p.right {
+    font-size: calc(9.5 * var(--md-font-size));
+    line-height: calc(8 * var(--md-font-size));
+  }
+  main section.chapters .head {
+    font-size: calc(2.25 * var(--md-font-size));
+    line-height: calc(2.5 * var(--md-font-size));
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter1, main section.chapter.chapter2, main section.chapter.chapter3, main section.chapter.chapter4, main section.chapter.chapter5, main section.chapter.chapter6 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter.chapter1 article, main section.chapter.chapter2 article, main section.chapter.chapter3 article, main section.chapter.chapter4 article, main section.chapter.chapter5 article, main section.chapter.chapter6 article {
+    width: 100%;
+    font-size: calc(1.875 * var(--md-font-size));
+    line-height: calc(2.25 * var(--md-font-size));
+  }
+  main section.chapter.chapter1 .title {
+    top: calc(0 * var(--basic-size));
+    right: calc(8 * var(--basic-size));
+    width: initial;
+  }
+  main section.chapter.chapter1 .title p {
+    font-size: calc(5.5 * var(--md-font-size));
+    line-height: calc(9.65 * var(--md-font-size));
+  }
+  main section.chapter.chapter1 .no {
+    font-size: calc(6 * var(--md-font-size));
+    bottom: calc(2 * var(--basic-size));
+    right: calc(7 * var(--basic-size));
+  }
+  main section.chapter.chapter2 .title {
+    left: calc(4 * var(--basic-size));
+    top: calc(-10 * var(--basic-size));
+  }
+  main section.chapter.chapter2 .title p {
+    font-size: calc(6.4 * var(--md-font-size));
+    line-height: calc(10 * var(--md-font-size));
+  }
+  main section.chapter.chapter2 .no {
+    font-size: calc(6 * var(--md-font-size));
+  }
+  main section.chapter.chapter3 .title p {
+    font-size: calc(6 * var(--md-font-size));
+    line-height: calc(6.5 * var(--md-font-size));
+  }
+  main section.chapter.chapter3 .no {
+    font-size: calc(7 * var(--md-font-size));
+  }
+  main section.chapter.chapter4 {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter4 .title p {
+    font-size: calc(4.5 * var(--md-font-size));
+    line-height: calc(6 * var(--md-font-size));
+  }
+  main section.chapter.chapter4 .no {
+    font-size: calc(5.5 * var(--md-font-size));
+  }
+  main section.chapter.chapter5 {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter5 .title p {
+    font-size: calc(6 * var(--md-font-size));
+    line-height: calc(10.5 * var(--md-font-size));
+  }
+  main section.chapter.chapter5 .no {
+    font-size: calc(5.5 * var(--md-font-size));
+  }
+  main section.chapter.chapter6 {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter6 .title {
+    top: calc(-6 * var(--basic-size));
+    left: calc(6 * var(--basic-size));
+  }
+  main section.chapter.chapter6 .title p {
+    font-size: calc(4 * var(--md-font-size));
+    line-height: calc(5 * var(--md-font-size));
+  }
+  main section.chapter.chapter6 .no {
+    font-size: calc(5.5 * var(--md-font-size));
+    bottom: calc(-4 * var(--basic-size));
+    right: calc(0 * var(--basic-size));
+    text-align: right;
+  }
+  main ul.sections {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main ul.sections li {
+    padding: calc(2 * var(--basic-size)) 0;
+  }
+  main ul.sections li .left {
+    margin-right: calc(2 * var(--basic-size));
+  }
+  main ul.sections li .left i {
+    font-size: calc(2 * var(--md-font-size));
+    line-height: calc(2 * var(--md-font-size));
+  }
+  main ul.sections li a {
+    font-size: calc(2 * var(--md-font-size));
+    line-height: calc(2.25 * var(--md-font-size));
+  }
+  main footer {
+    padding: 0;
+  }
+  main footer .block {
+    width: calc(3 * var(--basic-size));
+    height: calc(3 * var(--basic-size));
+  }
+  main footer a {
+    font-size: calc(2.7 * var(--basic-size));
+  }
+}
+/* 992px */
+@media screen and (min-width: 992px) {
+  :root {
+    --lg-font-size: 18px;
+  }
+  main {
+    max-width: calc(95 * var(--basic-size));
+  }
+  main header {
+    padding: 0 calc(5 * var(--basic-size));
+  }
+  main header p {
+    font-size: calc(2 * var(--lg-font-size));
+    line-height: calc(2.5 * var(--lg-font-size));
+  }
+  main nav {
+    padding-left: calc(5 * var(--basic-size));
+    padding-right: calc(2.5 * var(--basic-size));
+  }
+  main nav .title h2 {
+    font-size: calc(1.8 * var(--lg-font-size));
+    line-height: calc(2.2 * var(--lg-font-size));
+  }
+  main nav .title h2.dot {
+    transform: translateY(calc(-1 * var(--lg-font-size)));
+  }
+  main nav .menus ul li {
+    width: calc(13.5 * var(--basic-size));
+    height: calc(4 * var(--basic-size));
+  }
+  main nav .menus ul li a {
+    font-size: calc(1.8 * var(--lg-font-size));
+    line-height: calc(2.2 * var(--lg-font-size));
+  }
+  main section.title {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.title p.publish {
+    font-size: calc(1.25 * var(--lg-font-size));
+    line-height: calc(1.6 * var(--lg-font-size));
+  }
+  main section.title p.author a {
+    font-size: calc(1.25 * var(--lg-font-size));
+    line-height: calc(1.6 * var(--lg-font-size));
+  }
+  main section.title p.left, main section.title p.right {
+    font-size: calc(9.5 * var(--lg-font-size));
+    line-height: calc(8 * var(--lg-font-size));
+  }
+  main section.chapters .head {
+    font-size: calc(2.25 * var(--lg-font-size));
+    line-height: calc(2.5 * var(--lg-font-size));
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter1, main section.chapter.chapter2, main section.chapter.chapter3, main section.chapter.chapter4, main section.chapter.chapter5, main section.chapter.chapter6 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter.chapter1 article, main section.chapter.chapter2 article, main section.chapter.chapter3 article, main section.chapter.chapter4 article, main section.chapter.chapter5 article, main section.chapter.chapter6 article {
+    width: 100%;
+    font-size: calc(1.875 * var(--lg-font-size));
+    line-height: calc(2.25 * var(--lg-font-size));
+  }
+  main section.chapter.chapter1 .title {
+    top: calc(0 * var(--basic-size));
+    right: calc(8 * var(--basic-size));
+    width: initial;
+  }
+  main section.chapter.chapter1 .title p {
+    font-size: calc(5.5 * var(--lg-font-size));
+    line-height: calc(9.65 * var(--lg-font-size));
+  }
+  main section.chapter.chapter1 .no {
+    font-size: calc(6 * var(--lg-font-size));
+    bottom: calc(2 * var(--basic-size));
+    right: calc(7 * var(--basic-size));
+  }
+  main section.chapter.chapter2 .title {
+    left: calc(4 * var(--basic-size));
+    top: calc(-10 * var(--basic-size));
+  }
+  main section.chapter.chapter2 .title p {
+    font-size: calc(6.4 * var(--lg-font-size));
+    line-height: calc(10 * var(--lg-font-size));
+  }
+  main section.chapter.chapter2 .no {
+    font-size: calc(6 * var(--lg-font-size));
+  }
+  main section.chapter.chapter3 .title p {
+    font-size: calc(6 * var(--lg-font-size));
+    line-height: calc(6.5 * var(--lg-font-size));
+  }
+  main section.chapter.chapter3 .no {
+    font-size: calc(7 * var(--lg-font-size));
+  }
+  main section.chapter.chapter4 {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter4 .title p {
+    font-size: calc(4.5 * var(--lg-font-size));
+    line-height: calc(6 * var(--lg-font-size));
+  }
+  main section.chapter.chapter4 .no {
+    font-size: calc(5.5 * var(--lg-font-size));
+  }
+  main section.chapter.chapter5 {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter5 .title p {
+    font-size: calc(6 * var(--lg-font-size));
+    line-height: calc(10.5 * var(--lg-font-size));
+  }
+  main section.chapter.chapter5 .no {
+    font-size: calc(5.5 * var(--lg-font-size));
+  }
+  main section.chapter.chapter6 {
+    margin-top: calc(20 * var(--basic-size));
+  }
+  main section.chapter.chapter6 .title {
+    top: calc(-6 * var(--basic-size));
+    left: calc(6 * var(--basic-size));
+  }
+  main section.chapter.chapter6 .title p {
+    font-size: calc(4 * var(--lg-font-size));
+    line-height: calc(5 * var(--lg-font-size));
+  }
+  main section.chapter.chapter6 .no {
+    font-size: calc(5.5 * var(--lg-font-size));
+    bottom: calc(-4 * var(--basic-size));
+    right: calc(0 * var(--basic-size));
+    text-align: right;
+  }
+  main ul.sections {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main ul.sections li {
+    padding: calc(2 * var(--basic-size)) 0;
+  }
+  main ul.sections li .left {
+    margin-right: calc(2 * var(--basic-size));
+  }
+  main ul.sections li .left i {
+    font-size: calc(2 * var(--lg-font-size));
+    line-height: calc(2 * var(--lg-font-size));
+  }
+  main ul.sections li a {
+    font-size: calc(2 * var(--lg-font-size));
+    line-height: calc(2.25 * var(--lg-font-size));
+  }
+}
+/* --1280 px-- */
 @media screen and (min-width: 1280px) {
   :root {
-    --base-font-size: 16px;
     --xl-font-size: 20px;
   }
   main {
-    max-width: 1280px;
+    max-width: calc(128 * var(--basic-size));
   }
   main header {
     padding: 0 calc(10 * var(--basic-size));
@@ -372,110 +733,135 @@ main footer a:hover {
     font-size: calc(1.8 * var(--xl-font-size));
     line-height: calc(2.2 * var(--xl-font-size));
   }
-  main nav .menus ul li.right {
-    text-align: right;
-  }
   main section.title {
     padding: 0 calc(10 * var(--basic-size));
   }
   main section.title p.publish {
-    font-size: calc(1.5625 * var(--base-size));
-    line-height: calc(2 * var(--base-size));
-  }
-  main section.title p.author {
-    text-align: right;
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.6 * var(--xl-font-size));
   }
   main section.title p.author a {
-    font-size: calc(1.5625 * var(--base-size));
-    line-height: calc(2 * var(--base-size));
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.6 * var(--xl-font-size));
   }
   main section.title p.left, main section.title p.right {
-    font-size: calc(11.875 * var(--base-size));
-    line-height: calc(10 * var(--base-size));
+    font-size: calc(9.5 * var(--xl-font-size));
+    line-height: calc(8 * var(--xl-font-size));
   }
   main section.chapters .head {
-    font-size: calc(4.375 * var(--base-size));
-    line-height: calc(5 * var(--base-size));
+    font-size: calc(2.25 * var(--xl-font-size));
+    line-height: calc(2.5 * var(--xl-font-size));
     padding: 0 calc(10 * var(--basic-size));
+  }
+  main section.chapter {
+    margin-top: calc(30 * var(--basic-size));
+  }
+  main section.chapter.chapter1 {
+    margin-left: calc(12.8 * var(--basic-size));
   }
   main section.chapter.chapter1 article {
     width: 709px;
-    font-size: calc(1.875 * var(--base-size));
-    line-height: calc(2.25 * var(--base-size));
+    font-size: calc(1.875 * var(--xl-font-size));
+    line-height: calc(2.25 * var(--xl-font-size));
+  }
+  main section.chapter.chapter1 .title {
+    top: calc(-2 * var(--basic-size));
+    right: calc(8 * var(--basic-size));
+    width: initial;
   }
   main section.chapter.chapter1 .title p {
-    font-size: calc(11 * var(--basic-size));
-    line-height: calc(19.3 * var(--basic-size));
+    font-size: calc(5.5 * var(--xl-font-size));
+    line-height: calc(9.65 * var(--xl-font-size));
   }
   main section.chapter.chapter1 .no {
-    font-size: calc(12 * var(--basic-size));
-    line-height: calc(15 * var(--basic-size));
+    font-size: calc(6 * var(--xl-font-size));
+    bottom: calc(10.5 * var(--basic-size));
+    right: calc(7 * var(--basic-size));
+  }
+  main section.chapter.chapter2 {
+    margin-left: calc(12.8 * var(--basic-size));
   }
   main section.chapter.chapter2 article {
-    font-size: calc(2.5 * var(--basic-size));
-    line-height: calc(3 * var(--basic-size));
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.5 * var(--xl-font-size));
   }
   main section.chapter.chapter2 .title p {
-    font-size: calc(12.8 * var(--basic-size));
-    line-height: calc(20 * var(--basic-size));
+    font-size: calc(6.4 * var(--xl-font-size));
+    line-height: calc(10 * var(--xl-font-size));
   }
   main section.chapter.chapter2 .no {
-    font-size: calc(12 * var(--basic-size));
-    line-height: calc(15 * var(--basic-size));
+    font-size: calc(6 * var(--xl-font-size));
+  }
+  main section.chapter.chapter3 {
+    margin-left: calc(12.8 * var(--basic-size));
   }
   main section.chapter.chapter3 article {
-    font-size: calc(2.5 * var(--basic-size));
-    line-height: calc(3 * var(--basic-size));
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.5 * var(--xl-font-size));
   }
   main section.chapter.chapter3 .title p {
-    font-size: calc(12 * var(--basic-size));
-    line-height: calc(13 * var(--basic-size));
+    font-size: calc(6 * var(--xl-font-size));
+    line-height: calc(6.5 * var(--xl-font-size));
   }
   main section.chapter.chapter3 .no {
-    font-size: calc(14 * var(--basic-size));
-    line-height: calc(17.5 * var(--basic-size));
+    font-size: calc(7 * var(--xl-font-size));
+  }
+  main section.chapter.chapter4 {
+    margin-left: calc(25.6 * var(--basic-size));
+    margin-top: calc(50 * var(--basic-size));
   }
   main section.chapter.chapter4 article {
     width: 899px;
-    font-size: calc(2.5 * var(--basic-size));
-    line-height: calc(3 * var(--basic-size));
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.5 * var(--xl-font-size));
   }
   main section.chapter.chapter4 .title p {
-    font-size: calc(9 * var(--basic-size));
-    line-height: calc(12 * var(--basic-size));
+    font-size: calc(4.5 * var(--xl-font-size));
+    line-height: calc(6 * var(--xl-font-size));
   }
   main section.chapter.chapter4 .no {
-    font-size: calc(11 * var(--basic-size));
-    line-height: calc(13.75 * var(--basic-size));
+    font-size: calc(5.5 * var(--xl-font-size));
+  }
+  main section.chapter.chapter5 {
+    margin-left: calc(12.8 * var(--basic-size));
+    margin-top: calc(50 * var(--basic-size));
   }
   main section.chapter.chapter5 article {
     width: 768px;
-    font-size: calc(2.5 * var(--basic-size));
-    line-height: calc(3 * var(--basic-size));
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.5 * var(--xl-font-size));
   }
   main section.chapter.chapter5 .title p {
-    font-size: calc(12 * var(--basic-size));
-    line-height: calc(21 * var(--basic-size));
+    font-size: calc(6 * var(--xl-font-size));
+    line-height: calc(10.5 * var(--xl-font-size));
   }
   main section.chapter.chapter5 .no {
-    font-size: calc(11 * var(--basic-size));
-    line-height: calc(13.75 * var(--basic-size));
+    font-size: calc(5.5 * var(--xl-font-size));
+  }
+  main section.chapter.chapter6 {
+    margin-left: calc(38.6 * var(--basic-size));
+    margin-top: calc(50 * var(--basic-size));
   }
   main section.chapter.chapter6 article {
     width: 768px;
-    font-size: calc(2.5 * var(--basic-size));
-    line-height: calc(3 * var(--basic-size));
+    font-size: calc(1.25 * var(--xl-font-size));
+    line-height: calc(1.5 * var(--xl-font-size));
   }
   main section.chapter.chapter6 .title p {
-    font-size: calc(8 * var(--basic-size));
-    line-height: calc(10 * var(--basic-size));
+    font-size: calc(4 * var(--xl-font-size));
+    line-height: calc(5 * var(--xl-font-size));
   }
   main section.chapter.chapter6 .no {
-    font-size: calc(11 * var(--basic-size));
-    line-height: calc(13.75 * var(--basic-size));
+    font-size: calc(5.5 * var(--xl-font-size));
+  }
+  main ul.sections {
+    padding: 0 calc(10 * var(--basic-size));
   }
   main ul.sections li {
     padding: calc(2 * var(--basic-size)) 0;
+  }
+  main ul.sections li .left {
+    margin-right: calc(2 * var(--basic-size));
   }
   main ul.sections li .left i {
     font-size: calc(2 * var(--xl-font-size));
@@ -485,9 +871,4 @@ main footer a:hover {
     font-size: calc(2 * var(--xl-font-size));
     line-height: calc(2.25 * var(--xl-font-size));
   }
-}
-
-/* 375px */
-@media only screen and (min-width=375px){
-  
 }
