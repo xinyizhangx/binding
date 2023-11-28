@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inika&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kadwa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+:root {
+  --color-base: #000;
+  --color-black: #000;
+  --color-white: #fff;
+  --background-base: #fff;
+  --color-blue: #3c87f8;
+  --font-inter: "Inter";
+  --font-JacquesFrancoisShadow: "Jacques Francois Shadow";
+  --font-Abril-Fatface: "Abril Fatface";
+  --font-Silkscreen: "Silkscreen";
+  --font-Acme: "Acme";
+  --font-InknutAntiqua: "Inknut Antiqua";
+  --font-Inika: "Inika";
+  --font-CourierPrime: "Courier Prime";
+  --font-Habibi:"Habibi";
+  --font-Spirax:"Spirax";
+  --font-Libre-Bodoni: "Libre Bodoni";
+  --font-Roboto: "Roboto";
+  --font-Pacifico: "Pacifico";
+  --font-Lato: "Lato";
+  --fony-Koulen:"Koulen";
+  --font-Outfit:"Outfit";
+  --font-Kadwa: "Kadwa";
+  --font-weight: 400;
+  --border-size: 1px;
+  --basic-size: 10px;
+  --font-size: 14px;
+}
+
+.square {
+  width: calc(1.5 * var(--basic-size));
+  height: calc(1.5 * var(--basic-size));
+  margin-right: calc(1 * var(--basic-size));
+}
+
+.dot::before {
+  content: "";
+  display: inline-block;
+  background: var(--color-base);
+  width: calc(0.8 * var(--basic-size));
+  height: calc(0.8 * var(--basic-size));
+  border-radius: calc(0.4 * var(--basic-size));
+  margin-right: calc(1 * var(--basic-size));
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(5 * var(--basic-size)) 0;
+}
+
+main header .head {
+  display: flex;
+  align-items: center;
+}
+
+main header .head .square {
+  background: var(--color-black);
+  margin-right: calc(0.5 * var(--basic-size));
+}
+
+main header .head a {
+  font-family: var(--font-inter);
+  font-size: calc(1.25 * var(--font-size));
+}
+
+main header nav {
+  flex: 1;
+}
+
+main header nav ul {
+  display: flex;
+  padding: 0 calc(2 * var(--basic-size));
+  justify-content: space-around;
+}
+
+main header nav ul li {
+  width: calc(10 * var(--basic-size));
+}
+
+main header nav ul li a p {
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: var(--font-size);
+}
+
+main footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: calc(5 * var(--basic-size)) 0;
+}
+
+main footer .toTop {
+  background: var(--color-primary);
+  width: calc(7 * var(--basic-size));
+  height: calc(7 * var(--basic-size));
+  text-align: center;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main footer .toTop a {
+  display: inline-block;
+}
+
+main footer .toTop button {
+  scroll-behavior: smooth;
+  width: 60px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #fff;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+}
+
+main footer .toTop button > div, main footer .toTop button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+main footer .toTop button:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+main footer .toTop button:before:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+main footer .toTop button .clone > *,
+main footer .toTop button .text > * {
+  opacity: 1;
+  font-size: 1.1rem;
+  transition: 0.2s;
+  margin-left: 2px;
+}
+
+main footer .toTop button .clone > * {
+  transform: translateY(60px);
+}
+
+main footer .toTop button:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+main footer .toTop button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+main footer .toTop button:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+main footer .toTop button:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+main footer .toTop button:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+main footer .toTop button:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+main footer .toTop button:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+main footer .toTop button svg {
+  width: 16px;
+  right: 0;
+  top: 42%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+.spinner {
+  --size: 50px;
+  --first-block-clr: #005bba;
+  --second-block-clr: #fed500;
+  --clr: #111;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: calc(10 * var(--basic-size));
+}
+
+.spinner::after,
+.spinner::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  top: 50%;
+  animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+  left: 50%;
+  background: var(--first-block-clr);
+}
+
+.spinner::after {
+  background: #fff;
+  border: 10px solid var(--first-block-clr);
+  top: calc(50% - var(--size));
+  left: calc(50% - var(--size));
+  animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+}
+
+@keyframes down {
+  0%, 100% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+  75% {
+    transform: translateY(100%);
+  }
+}
+@keyframes up {
+  0%, 100% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+}
+
+/* 768px */
+@media screen and (min-width: 768px) {
+  :root {
+    --font-size: 16px;
+  }
+  main {
+    max-width: calc(75 * var(--basic-size));
+  }
+  main header {
+    padding: calc(5 * var(--basic-size)) 0;
+  }
+  main header .head .square {
+    width: calc(2 * var(--basic-size));
+    height: calc(2 * var(--basic-size));
+  }
+  main header nav {
+    flex: initial;
+  }
+  main header nav ul {
+    padding: initial;
+    justify-content: initial;
+  }
+  main header nav ul li {
+    width: calc(18 * var(--basic-size));
+  }
+  main footer .toTop {
+    width: calc(8 * var(--basic-size));
+    height: calc(8 * var(--basic-size));
+  }
+  main footer .toTop button {
+    width: 70px;
+    height: 56px;
+  }
+  main footer .toTop button .clone > *,
+  main footer .toTop button .text > * {
+    font-size: 1.2rem;
+    margin-left: 2px;
+  }
+  main footer .toTop button svg {
+    width: 18px;
+    top: 45%;
+  }
+  .spinner {
+    --size: 60px;
+  }
+}
+
+/* 992px */
+@media screen and (min-width: 992px) {
+  :root {
+    --font-size: 18px;
+  }
+  main {
+    max-width: calc(97 * var(--basic-size));
+  }
+  main header {
+    padding: calc(5 * var(--basic-size)) 0;
+  }
+  main header .head .square {
+    width: calc(3 * var(--basic-size));
+    height: calc(3 * var(--basic-size));
+  }
+  main header nav ul li {
+    width: calc(24 * var(--basic-size));
+  }
+  main footer .toTop {
+    width: calc(10 * var(--basic-size));
+    height: calc(10 * var(--basic-size));
+  }
+  main footer .toTop button {
+    width: 90px;
+    height: 56px;
+  }
+  main footer .toTop button .clone > *,
+  main footer .toTop button .text > * {
+    font-size: 1.3rem;
+    margin-left: 4px;
+  }
+  main footer .toTop button svg {
+    width: 22px;
+  }
+  .spinner {
+    --size: 70px;
+  }
+}
+
+/* 1280px */
+@media screen and (min-width: 1280px) {
+  :root {
+    --font-size: 20px;
+  }
+  main {
+    max-width: calc(128 * var(--basic-size));
+  }
+  main header {
+    padding: calc(5 * var(--basic-size)) 0;
+  }
+  main header .head .square {
+    width: calc(3.9 * var(--basic-size));
+    height: calc(3.9 * var(--basic-size));
+  }
+  main header nav ul li {
+    width: calc(32 * var(--basic-size));
+  }
+  main footer .toTop {
+    width: calc(12 * var(--basic-size));
+    height: calc(12 * var(--basic-size));
+  }
+  main footer .toTop button {
+    width: 100px;
+    height: 56px;
+  }
+  main footer .toTop button .clone > *,
+  main footer .toTop button .text > * {
+    font-size: 1.4rem;
+    margin-left: 4px;
+  }
+  main footer .toTop button svg {
+    width: 24px;
+  }
+  .spinner {
+    --size: 80px;
+  }
+}
+
+/* 1720px */
+@media screen and (min-width: 1720px) {
+  :root {
+    --font-size: 24px;
+  }
+  main {
+    max-width: calc(172 * var(--basic-size));
+    padding: 0 calc(4 * var(--basic-size));
+    box-sizing: border-box;
+  }
+  main header {
+    padding: calc(5 * var(--basic-size)) 0;
+  }
+  main header .head .square {
+    width: calc(3.9 * var(--basic-size));
+    height: calc(3.9 * var(--basic-size));
+  }
+  main header nav ul li {
+    width: calc(45 * var(--basic-size));
+  }
+  main footer .toTop {
+    width: calc(12 * var(--basic-size));
+    height: calc(12 * var(--basic-size));
+  }
+  main footer .toTop button {
+    width: 100px;
+    height: 56px;
+  }
+  main footer .toTop button .clone > *,
+  main footer .toTop button .text > * {
+    font-size: 1.4rem;
+    margin-left: 4px;
+  }
+  main footer .toTop button svg {
+    width: 26px;
+  }
+  .spinner {
+    --size: 100px;
+  }
+}
