@@ -1,362 +1,971 @@
-
-body{
-  width: 60%;
-  margin: auto;
+@import url(common.css);
+:root {
+  --color-primary: #70a9ff;
 }
 
-.title{
-  font-size: 6vw;
-  text-align: center;
-  font-family:'Libre Baskerville';
-  margin-bottom: 0;
+.rectangle {
+  width: calc(3 * var(--basic-size));
+  height: calc(3 * var(--basic-size));
 }
 
-.meta-container {
+main header .head .square {
+  background: var(--color-primary);
+}
+
+main section.banner {
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-  height: 50vh;          
-  width: 100%;      
+  position: relative;
+  margin: calc(8 * var(--basic-size)) 0;
 }
 
-.author-link {
-  color: black;           
-  text-decoration: none;  
+main section.banner h1 {
+  position: absolute;
+  top: calc(5 * var(--basic-size));
+  left: 0;
+  width: 100%;
+  font-family: var(--font-Silkscreen);
+  text-align: center;
+  text-shadow: calc(var(--basic-size)) calc(-1 * var(--basic-size)) calc(var(--basic-size)) rgba(0, 0, 0, 0.3);
+  font-size: calc(2 * var(--font-size));
+  line-height: calc(5 * var(--font-size));
 }
 
-.author-link:visited {
-  color: black;        
+main section.banner .block {
+  width: auto;
+  height: auto;
 }
 
-.author-link:hover, .author-link:focus, .author-link:active {
-  color: rgb(0, 128, 255);          
+main section.banner .left {
+  flex: 1;
+  height: calc(84 * var(--basic-size));
+  background: var(--color-primary);
 }
 
-.author,
-.time {
-  margin-top: 0;
-  margin-bottom: 0; 
-  font-size: 25px;
-  font-family:'Libre Baskerville';
+main section.banner .left .title {
+  height: calc(28 * var(--basic-size));
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+main section.banner .left .title .rectangle {
+  background: var(--color-white);
+  margin-right: calc(1 * var(--basic-size));
+}
+
+main section.banner .left .title p {
+  font-size: calc(1.5 * var(--font-size));
+  line-height: calc(2 * var(--font-size));
+  font-family: var(--font-Acme);
+}
+
+main section.banner .left .chunk {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main section.banner .left .chunk .block {
+  height: calc(28 * var(--basic-size));
+  width: 80%;
+  background: var(--color-white);
+}
+
+main section.banner .left .menu {
+  height: calc(28 * var(--basic-size));
+}
+
+main section.banner .left .menu .rectangle {
+  background: var(--color-white);
+  margin-left: 10%;
+  margin-top: var(--basic-size);
+}
+
+main section.banner .left .menu p {
+  font-family: var(--font-Acme);
+  padding: 0 calc(1 * var(--basic-size));
+  text-align: right;
+  margin-bottom: calc(1 * var(--basic-size));
+}
+
+main section.banner .left .menu p a {
+  color: var(--color-white);
+  font-size: calc(1.2 * var(--font-size));
+  line-height: calc(1.4 * var(--font-size));
+}
+
+main section.banner .left .menu p a.gray {
+  color: #d4d4d4;
+}
+
+main section.banner .right {
+  flex: 1;
+  flex-direction: column;
+}
+
+main section.banner .right .title {
+  height: calc(28 * var(--basic-size));
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+main section.banner .right .title .rectangle {
+  background: var(--color-primary);
+  margin-right: calc(1 * var(--basic-size));
+}
+
+main section.banner .right .title p {
+  font-size: calc(1.5 * var(--font-size));
+  line-height: calc(2 * var(--font-size));
+  font-family: var(--font-Acme);
+}
+
+main section.banner .right .block {
+  height: calc(28 * var(--basic-size));
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+main section.banner .right .block p {
+  text-align: center;
+  padding: 0 calc(1 * var(--basic-size));
+  font-size: calc(1.5 * var(--font-size));
+  line-height: calc(1.6 * var(--font-size));
+  color: var(--color-white);
+}
+
+main section.chapter article p:first-letter {
+  text-transform: capitalize;
+}
+
+main section.chapter1 .title {
+  font-family: var(--font-InknutAntiqua);
+  margin-bottom: calc(5 * var(--basic-size));
+  font-weight: calc(1.75 * var(--font-weight));
+  font-size: calc(1.5 * var(--font-size));
+  line-height: calc(2.5 * var(--font-size));
+  padding: 0 calc(2 * var(--basic-size));
+}
+
+main section.chapter1 .segment {
+  padding: 0 calc(2 * var(--basic-size));
+}
+
+main section.chapter1 .segment aside p {
+  font-family: var(--font-InknutAntiqua);
+  font-size: calc(1.4 * var(--font-size));
+  line-height: calc(2 * var(--font-size));
+  margin-bottom: calc(2 * var(--basic-size));
+  border: 3px solid var(--color-primary);
+  padding: calc(2 * var(--basic-size));
+}
+
+main section.chapter1 .segment aside p:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+main section.chapter1 .segment article p {
+  font-family: var(--font-Inika);
+  margin-bottom: calc(3 * var(--basic-size));
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.6 * var(--font-size));
+}
+
+main section.chapter1 .segment article p:first-letter {
+  font-weight: calc(1.75 * var(--font-weight));
+}
+
+main section.chapter1 .mark {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main section.chapter1 .mark article {
+  background: var(--color-primary);
+  padding: calc(2 * var(--basic-size));
+  transition: 0.5s;
+}
+
+main section.chapter1 .mark article:hover {
+  border-radius: calc(5 * var(--basic-size));
+  transition: 1.5s;
+}
+
+main section.chapter1 .mark article p {
   font-style: italic;
+  font-family: var(--font-CourierPrime);
+  margin-bottom: calc(3 * var(--basic-size));
+  color: var(--color-white);
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.6 * var(--font-size));
 }
 
-.author{
-  margin-right: 250px;
+main section.chapter2 {
+  padding: 0 calc(2 * var(--basic-size));
 }
 
-.sub{
-  color: darkblue;
-  font-family: 'Oxanium';
-  font-size: 1.5vw;
+main section.chapter2 article p {
+  margin-bottom: calc(3 * var(--basic-size));
+}
+
+main section.chapter2 article.left {
+  font-family: var(--font-CourierPrime);
+}
+
+main section.chapter2 article.left p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.35 * var(--font-size));
+}
+
+main section.chapter2 article.right .rectangle {
+  background: var(--color-primary);
+}
+
+main section.chapter2 article.right .content {
+  margin-top: calc(-3 * var(--basic-size));
+  padding-left: calc(1.5 * var(--font-size));
+}
+
+main section.chapter2 article.right .content p {
+  font-family: var(--font-CourierPrime);
+  font-style: italic;
+  font-weight: calc(1.5 * var(--font-weight));
   text-align: center;
+  font-size: calc(1.25 * var(--font-size));
 }
 
-.bold-underline {
-  font-weight: bold;
-  text-decoration: underline;
-  color: black; 
-}
-.bold-underline:active {
-  color: gray;
-}
-.bold-underline:hover {
-  color:rgb(0, 128, 255); 
+main section.chapter3 {
+  padding: 0 calc(2 * var(--basic-size));
 }
 
-
-.question1,.question2,.question3,.question4,.question5,.question6{
-  width: 70%;
-  word-wrap: break-word;
-  margin-top: 300px;
-  margin-bottom: 300px;
-  font-family: 'bitter';
-  font-weight: 'semibold';
-  font-size: 1.8vw;
-}
-.question6{
-  width: 80%;
+main section.chapter3 .rectangle {
+  background: var(--color-primary);
 }
 
-p{
-  width: 72%;
-  font-size: 1.3vw;
-  font-style: light;
-  font-family: 'bitter';
-  letter-spacing: auto;
-  line-height: 1.5; 
-  margin-left: 250px;
+main section.chapter3 article {
+  flex: 1;
 }
 
-.p2{
-  width: 80%;
+main section.chapter3 article p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.5 * var(--font-size));
 }
 
-.blue-section {
-  margin-top: 400px;
-  margin-bottom: 400px;
-  background-color: rgb(4, 148, 255);  
-  height: 400px;
-  width: 1300px;           
-  display: flex;          
-  align-items: center;     
-  justify-content: center; 
+main section.chapter3 .top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(5 * var(--basic-size));
 }
 
-
-.centered-text,.blue-words,.white-text,.i1,.i2,.elements,.an{
-  font-family: Oxanium
+main section.chapter3 .top .container {
+  width: 30%;
 }
 
-.centered-text{
-  width: 60%;
+main section.chapter3 .center {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(5 * var(--basic-size));
 }
 
-.blue-square {
-  width: 99px;
-  height: 99px;
-  background-color: rgb(4, 148, 255);  
+main section.chapter3 .center .container {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.blue-words{
-  width: 60%;
-  font-family: bitter;
-  font-style: regular;
-  font-size: 2vw;
-  margin-left: 450px;
-  margin-top: 230px;
-  margin-bottom: 230px;
+main section.chapter3 .bottom {
+  margin-top: calc(7 * var(--basic-size));
 }
 
-.blue-square2 {
-  margin-left: 1200px;
-  width: 99px;
-  height: 99px;
-  background-color: rgb(4, 148, 255);  
+main section.chapter4 {
+  padding: 0 calc(2 * var(--basic-size));
 }
 
-.centered-text{
-  color: white;
-  text-align: center;
-  place-items: center;
-  margin-left: 0;
+main section.chapter4 .rectangle {
+  background: var(--color-primary);
+  width: calc(7.9 * var(--font-size));
+  height: calc(7.9 * var(--font-size));
 }
 
-.blue-rectangle {
-  background-color: rgb(4, 148, 255);  
-  padding-bottom: 200px; 
-  padding-right: 200px; 
-  width: 86%; 
-  display: flex; 
-  justify-content: left; 
-  align-items: left; 
-  margin-top: 300px;
-  height:400px;
-
+main section.chapter4 article {
+  flex: 1;
 }
 
-.white-text {
-  color: white;
-  width: 60%;
-  text-align: left; 
-  margin-left: 30px;
+main section.chapter4 article p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.5 * var(--font-size));
 }
 
-table {
-  margin-left: 300px;
-  border-collapse: collapse;
-  margin-top: 50px;
+main section.chapter4 .top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(5 * var(--basic-size));
 }
 
-td {
-  border: none;  
-  padding: 30px; 
-  vertical-align: top;
-  font-size: 20px;
+main section.chapter4 .top .container {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-.bordered-cell {
-  border-right: 1px solid black; 
+main section.chapter4 .center {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(5 * var(--basic-size));
 }
 
-.blue-rectangle2{
-  background-color:rgb(4, 148, 255);  
-  margin-top: 200px;
-  padding: 10px; 
-  color: white; 
-  width: 1300px; 
-  height: 750px;
+main section.chapter4 .center .container {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-.question4 {
-  margin:0;
-  text-align: left;
-  margin-left: 20px;
-  margin-top: 20px;
-  width:60%;
-  font-size: 2vw;
-  font-family:bitter;
-  font-style: bold;
-  color: black;
+main section.chapter4 .bottom {
+  margin-top: calc(7 * var(--basic-size));
 }
 
-.custom-table {
-  width: 60%;
-  border-collapse: collapse;
-  margin-top: 280px;
-  margin-left: 400px;
-  font-size: bitter;
-  font-style: light;
+main section.chapter4 .bottom p {
+  font-family: var(--font-CourierPrime);
 }
 
-.custom-table td {
-  border: none; 
-  padding: 10px; 
+main section.chapter5 {
+  padding: 0 calc(2 * var(--basic-size));
 }
 
-.elements{
-  margin-top: 500px;
-  margin-bottom: 500px;
-  text-align: center;
-  font-style: regular;
-  font-size: 1vw;
+main section.chapter5 .rectangle {
+  background: var(--color-primary);
+  width: calc(5 * var(--font-size));
+  height: calc(5 * var(--font-size));
 }
 
-.blue-rectangle3{
-  background-color:rgb(4, 148, 255);  
-  margin-top: 200px;
-  padding: 10px; 
-  color: white; 
-  width: 1300px; 
-  height: 750px;
+main section.chapter5 .container {
+  width: 50%;
+  display: flex;
 }
 
-.question5{
-  margin:0;
-  text-align: left;
-  margin-left: 20px;
-  margin-top: 20px;
-  width:70%;
-  font-size: 1.9vw;
-  font-family:bitter;
-  font-style: bold;
-  color: black;
+main section.chapter5 article {
+  flex: 1;
 }
 
-.custom-table2{
-  width: 80%;
-  border-collapse: collapse;
-  margin-top: 280px;
-  margin-left: 250px;
-  font-size: bitter;
-  font-style: light;
-  margin-bottom: 10px;
+main section.chapter5 article p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.5 * var(--font-size));
 }
 
-.t1,.t2{
-  font-size: 0.9vw;
+main section.chapter5 .line {
+  display: flex;
+  margin-bottom: calc(7 * var(--basic-size));
 }
 
-.an{
-  margin-top: 500px;
-  margin-bottom: 500px;
-  margin-left: 700px;
-  font-style: regular;
-  width:50%;
-  font-size: 1.5vw;
+main section.chapter5 .line.one .container {
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-h3{
-  font-size: 1.7vw;
-  margin-top: 20px;
+main section.chapter5 .line.two .container {
+  padding-left: calc(3 * var(--basic-size));
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.bold-underline {
-    font-weight: bold;
-    text-decoration: underline;
+main section.chapter5 .line.three .container {
+  width: calc(50% - 2 * var(--basic-size));
 }
 
-.blue-rectanglel{
-  background-color:rgb(4, 148, 255);  
-  margin-top: 200px;
-  /* margin-bottom: 300px; */
-  padding: 10px; 
-  color: white; 
-  width: 1300px; 
-  height: 1050px;
+main section.chapter5 .line.three .container .rectangle {
+  width: 100%;
+  height: 100%;
+  margin-left: calc(-2 * var(--basic-size));
 }
 
-.question6 {
-  margin:0;
-  text-align: left;
-  margin-left: 20px;
-  margin-top: 20px;
-  width:55%;
-  font-size: 2vw;
-  font-family:bitter;
-  font-style: bold;
-  color: black;
+main section.chapter5 .line.four .container {
+  padding-left: calc(3 * var(--basic-size));
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.custom-tablel {
-  width: 60%;
-  border-collapse: collapse;
-  margin-top: 280px;
-  margin-left: 400px;
+main section.chapter5 .line.five .container {
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.l1,.l2,.l3{
-  margin-top: 30px;
-  margin-bottom: 35px;
-  font-family: bitter;
-  font-style: light;
-  font-size: 0.9vw;
+main section.chapter5 .line.six p, main section.chapter5 .line.seven p, main section.chapter5 .line.eight p, main section.chapter5 .line.nine p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.75 * var(--font-size));
 }
 
-.me{
-  font-size: 1vw;
-  font-family: bitter;
-  color: black;
-  margin-top:300px;
-  margin-left: 0;
+main section.chapter5 .line.eight {
+  justify-content: flex-end;
 }
 
-.topbutton {
-  display: inline-block;
-  margin-top: 100px; 
-  padding: 10px 15px;  
-  background-color: black;
-  color: white;
-  text-decoration: none;  
-  border-radius: 4px;  
-  transition: background-color 0.4s;  
-  margin-bottom: 500px;
+main section.chapter5 .line.eight p {
+  width: calc(30 * var(--font-size));
+  padding: calc(3 * var(--basic-size));
+  padding-right: calc(6 * var(--basic-size));
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-sizing: border-box;
 }
 
-.topbutton:hover {
-  background-color: rgb(4, 148, 255);
+main section.chapter5 .line.seven p {
+  width: calc(30 * var(--font-size));
 }
 
-.me,.space-text,.space-text2,.tu{
-  font-family: bitter;
-  font-size: 1vw;
-  margin-top: 150px;
-  color: black;
+main section.chapter5 .line.eight p {
+  width: calc(28 * var(--font-size));
 }
 
-.tu{
-  margin-left: 0;
-  margin-top: 20px;
+main section.chapter5 .line.eight p:hover {
+  border-radius: calc(5 * var(--basic-size));
+  transition: 1.5s;
 }
 
+main section.chapter5 .line.nine p {
+  width: calc(36.5 * var(--font-size));
+}
 
+main section.chapter6 {
+  padding: 0 calc(2 * var(--basic-size));
+}
 
+main section.chapter6 p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.75 * var(--font-size));
+}
 
+main section.chapter6 .row {
+  display: flex;
+}
 
+main section.chapter6 .row .rectangle {
+  background: var(--color-primary);
+}
 
+main section.chapter6 .row1 h3 {
+  margin: calc(6 * var(--basic-size)) 0;
+}
 
+main section.chapter6 .row1 .left {
+  width: calc(20 * var(--font-size));
+}
 
+main section.chapter6 .row1 .left .rectangle {
+  width: calc(12 * var(--font-size));
+  height: calc(12 * var(--font-size));
+}
 
+main section.chapter6 .row1 .left .piece {
+  height: calc(1 * var(--basic-size));
+  background: var(--color-primary);
+  margin-bottom: calc(6 * var(--basic-size));
+}
 
+main section.chapter6 .row1 .left p {
+  width: 90%;
+}
 
+main section.chapter6 .row1 .right {
+  flex: 1;
+  display: flex;
+  padding-left: calc(1 * var(--basic-size));
+}
 
+main section.chapter6 .row1 .right p {
+  flex: 1;
+}
+
+main section.chapter6 .row1 .right .piece {
+  height: calc(40 * var(--font-size));
+  width: calc(1 * var(--basic-size));
+  background: var(--color-primary);
+  margin-left: calc(1 * var(--basic-size));
+}
+
+main section.chapter6 .row2,
+main section.chapter6 .row3,
+main section.chapter6 .row4 {
+  margin-top: calc(6 * var(--basic-size));
+}
+
+main section.chapter6 .row2 .left,
+main section.chapter6 .row3 .left,
+main section.chapter6 .row4 .left {
+  width: calc(8 * var(--font-size));
+}
+
+main section.chapter6 .row2 article,
+main section.chapter6 .row3 article,
+main section.chapter6 .row4 article {
+  flex: 1;
+}
+
+main section.chapter6 .row2 article p,
+main section.chapter6 .row3 article p,
+main section.chapter6 .row4 article p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.75 * var(--font-size));
+}
+
+main section.chapter6 .row2 .rectangle {
+  width: calc(4 * var(--font-size));
+  height: calc(4 * var(--font-size));
+}
+
+main section.chapter6 .row2 article p {
+  width: 90%;
+}
+
+main section.chapter6 .row3 .rectangle {
+  width: calc(5 * var(--font-size));
+  height: calc(5 * var(--font-size));
+}
+
+main section.chapter6 .row3 article p {
+  width: 90%;
+}
+
+main section.chapter6 .row4 .rectangle {
+  width: calc(6 * var(--font-size));
+  height: calc(6 * var(--font-size));
+}
+main section.chapter6 .row4 article p {
+  width: 100%;
+  margin-bottom: calc(3 * var(--basic-size));
+}
+main section.chapter6 .row5 .left {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+main section.chapter6 .row5 .left .rectangle {
+  width: calc(10 * var(--font-size));
+  height: calc(10 * var(--font-size));
+}
+main section.chapter6 .row5 .right {
+  width: 50%;
+}
+main section.chapter6 .row5 .right p {
+  padding: calc(2 * var(--basic-size));
+}
+main section.chapter6 .row6 .left {
+  width: 50%;
+}
+main section.chapter6 .row6 .left p {
+  padding: calc(2 * var(--basic-size));
+}
+main section.chapter6 .row6 .right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-left: calc(2 * var(--basic-size));
+}
+main section.chapter6 .row6 .right .rectangle {
+  width: calc(6 * var(--font-size));
+  height: calc(6 * var(--font-size));
+}
+main h3 {
+  font-family: var(--font-Acme);
+  margin: calc(20 * var(--basic-size)) 0 calc(8 * var(--basic-size)) 0;
+  font-size: calc(2.25 * var(--font-size));
+  line-height: calc(2.25 * var(--font-size));
+  padding: 0 calc(2 * var(--basic-size));
+  color: var(--color-primary);
+}
+main h3.dot::before {
+  margin-right: calc(3 * var(--basic-size));
+  margin-bottom: calc(1 * var(--basic-size));
+  background: var(--color-primary);
+}
+
+.spinner {
+  --first-block-clr: var(--color-primary);
+}
+
+/* 768px */
+@media screen and (min-width: 768px) {
+  :root {
+    --font-size: 16px;
+  }
+  main section.banner h1 {
+    font-size: calc(3 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(28 * var(--basic-size));
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .left {
+    height: calc(84 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .left .chunk .block {
+    width: calc(28 * var(--basic-size));
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .left .menu {
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .left .menu p a {
+    font-size: calc(1.4 * var(--font-size));
+    line-height: calc(1.6 * var(--font-size));
+  }
+  main section.banner .right {
+    flex: initial;
+    width: calc(28 * var(--basic-size));
+  }
+  main section.banner .right .block {
+    height: calc(28 * var(--basic-size));
+  }
+  main section.chapter1 .title {
+    font-size: calc(1.5 * var(--font-size));
+    line-height: calc(2.5 * var(--font-size));
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter1 .segment {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter1 .segment aside p {
+    font-size: calc(1.4 * var(--font-size));
+    line-height: calc(2 * var(--font-size));
+  }
+  main section.chapter1 .mark article p {
+    font-size: calc(1.25 * var(--font-size));
+    line-height: calc(1.35 * var(--font-size));
+  }
+  main section.chapter2 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter2 article.left p {
+    font-size: calc(1.25 * var(--font-size));
+    line-height: calc(1.35 * var(--font-size));
+  }
+  main section.chapter3 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter4 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter5 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter5 .line.three .container {
+    width: calc(50% - 4 * var(--basic-size));
+  }
+  main section.chapter5 .line.three .container .rectangle {
+    margin-left: calc(-4 * var(--basic-size));
+  }
+  main section.chapter6 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+  main section.chapter6 .row1 .right {
+    padding-left: calc(2 * var(--basic-size));
+  }
+  main section.chapter6 .row1 .right p {
+    flex: 1;
+  }
+  main section.chapter6 .row2 .left,
+  main section.chapter6 .row3 .left,
+  main section.chapter6 .row4 .left {
+    width: calc(15 * var(--font-size));
+  }
+  main h3 {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+}
+
+/* 992px */
+@media screen and (min-width: 992px) {
+  :root {
+    --font-size: 18px;
+  }
+  main section.banner h1 {
+    font-size: calc(4 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(38 * var(--basic-size));
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .left {
+    height: calc(114 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    width: 100%;
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .left .chunk .block {
+    width: calc(38 * var(--basic-size));
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .left .menu {
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .right {
+    width: calc(38 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .right .block {
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .right .block p {
+    line-height: calc(2 * var(--font-size));
+  }
+  main section.chapter1 .title {
+    font-size: calc(1.5 * var(--font-size));
+    line-height: calc(2.5 * var(--font-size));
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter1 .segment {
+    padding: 0 calc(6 * var(--basic-size));
+    display: flex;
+    justify-content: space-between;
+  }
+  main section.chapter1 .segment aside p {
+    font-size: calc(1.4 * var(--font-size));
+    line-height: calc(2 * var(--font-size));
+    margin-right: calc(2 * var(--basic-size));
+    text-align: center;
+  }
+  main section.chapter1 .mark article p {
+    font-size: calc(1.25 * var(--font-size));
+    line-height: calc(1.35 * var(--font-size));
+  }
+  main section.chapter2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter2 article {
+    margin-right: calc(2 * var(--basic-size));
+  }
+  main section.chapter2 article.left p {
+    font-size: calc(1.25 * var(--font-size));
+    line-height: calc(1.35 * var(--font-size));
+  }
+  main section.chapter2 article.right .content {
+    padding-left: calc(1.5 * var(--font-size));
+  }
+  main section.chapter3 {
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter4 {
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter4 .bottom {
+    width: 80%;
+  }
+  main section.chapter5 {
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter5 .rectangle {
+    width: calc(7.9 * var(--font-size));
+    height: calc(7.9 * var(--font-size));
+  }
+  main section.chapter5 .line.three .container {
+    width: calc(50% - 6 * var(--basic-size));
+  }
+  main section.chapter5 .line.three .container .rectangle {
+    margin-left: calc(-6 * var(--basic-size));
+  }
+  main section.chapter6 {
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter6 .row1 .left {
+    width: calc(30 * var(--font-size));
+  }
+  main section.chapter6 .row5 .left .rectangle {
+    width: calc(12 * var(--font-size));
+    height: calc(12 * var(--font-size));
+  }
+  main section.chapter6 .row6 .right .rectangle {
+    width: calc(8 * var(--font-size));
+    height: calc(8 * var(--font-size));
+  }
+  main h3 {
+    padding: 0 calc(6 * var(--basic-size));
+  }
+}
+
+/* 1280px */
+@media screen and (min-width: 1280px) {
+  :root {
+    --font-size: 20px;
+  }
+  main section.banner h1 {
+    font-size: calc(4 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(48.4 * var(--basic-size));
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .left {
+    height: calc(145.2 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .left .chunk .block {
+    width: calc(48.4 * var(--basic-size));
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .left .menu {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .right {
+    width: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .right .block {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.chapter1 .title {
+    width: calc(56.2 * var(--basic-size));
+    font-size: calc(1.5 * var(--font-size));
+    line-height: calc(2.5 * var(--font-size));
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter1 .segment {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter1 .segment aside p {
+    font-size: calc(1.4 * var(--font-size));
+    line-height: calc(2 * var(--font-size));
+    width: calc(42.7 * var(--basic-size));
+  }
+  main section.chapter1 .segment article {
+    width: calc(63.4 * var(--basic-size));
+  }
+  main section.chapter1 .mark {
+    margin-top: calc(6 * var(--basic-size));
+  }
+  main section.chapter1 .mark article {
+    width: calc(101.9 * var(--basic-size));
+  }
+  main section.chapter1 .mark article p {
+    font-size: calc(1.25 * var(--font-size));
+    line-height: calc(1.35 * var(--font-size));
+  }
+  main section.chapter2 {
+    padding: 0 calc(8 * var(--basic-size));
+    flex-direction: column;
+  }
+  main section.chapter2 article {
+    margin-right: initial;
+  }
+  main section.chapter2 article.left {
+    width: calc(65 * var(--basic-size));
+  }
+  main section.chapter2 article.left p {
+    font-size: calc(1.25 * var(--font-size));
+    line-height: calc(1.35 * var(--font-size));
+  }
+  main section.chapter2 article.right {
+    margin-top: calc(8 * var(--basic-size));
+  }
+  main section.chapter2 article.right .info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  main section.chapter2 article.right .info .content {
+    width: calc(55.3 * var(--basic-size));
+    margin-top: initial;
+  }
+  main section.chapter3 {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter4 {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter5 {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter5 .line.three .container {
+    width: calc(50% - 8 * var(--basic-size));
+  }
+  main section.chapter5 .line.three .container .rectangle {
+    margin-left: calc(-8 * var(--basic-size));
+  }
+  main section.chapter6 {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter6 .row1 .left .piece {
+    height: calc(1.75 * var(--font-size));
+  }
+  main section.chapter6 .row1 .right {
+    padding-left: calc(2 * var(--basic-size));
+  }
+  main section.chapter6 .row1 .right .piece {
+    height: calc(40 * var(--font-size));
+    width: calc(1.75 * var(--font-size));
+    margin-left: calc(2 * var(--basic-size));
+  }
+  main section.chapter6 .row5 .left .rectangle {
+    width: calc(18 * var(--font-size));
+    height: calc(18 * var(--font-size));
+  }
+  main section.chapter6 .row5 .right p {
+    padding: calc(3 * var(--basic-size));
+  }
+  main section.chapter6 .row6 .left p {
+    padding: calc(3 * var(--basic-size));
+  }
+  main section.chapter6 .row6 .right {
+    padding-left: calc(3 * var(--basic-size));
+  }
+  main section.chapter6 .row6 .right .rectangle {
+    width: calc(10 * var(--font-size));
+    height: calc(10 * var(--font-size));
+  }
+  main h3 {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+}
+
+/* 1720px */
+@media screen and (min-width: 1720px) {
+  :root {
+    --font-size: 24px;
+  }
+  main section.banner h1 {
+    font-size: calc(4 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(60 * var(--basic-size));
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .left {
+    height: calc(180 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .left .chunk .block {
+    width: calc(60 * var(--basic-size));
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .left .menu {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .right {
+    width: calc(60 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .right .block {
+    height: calc(60 * var(--basic-size));
+  }
+}
