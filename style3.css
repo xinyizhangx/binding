@@ -1,12 +1,587 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
+@import url(common.css);
+
+:root {
+  --color-primary: #ffb1d4;
 }
 
+main header .head .square {
+  background: var(--color-primary);
+}
+main section.banner {
+  display: flex;
+  position: relative;
+  margin: calc(8 * var(--basic-size)) 0;
+}
+main section.banner h1 {
+  position: absolute;
+  top: calc(5 * var(--basic-size));
+  left: 0;
+  width: 100%;
+  font-family: var(--font-Silkscreen);
+  text-align: center;
+  text-shadow: calc(var(--basic-size)) calc(-1 * var(--basic-size)) calc(var(--basic-size)) rgba(0, 0, 0, 0.3);
+  font-size: calc(2 * var(--font-size));
+  line-height: calc(5 * var(--font-size));
+}
+main section.banner h1 p {
+  padding: 0 20%;
+  text-align: center;
+}
+main section.banner .block {
+  width: auto;
+  height: auto;
+}
+main section.banner .left {
+  flex: 1;
+  flex-direction: column;
+}
+main section.banner .left .title {
+  height: calc(28 * var(--basic-size));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+main section.banner .left .title p {
+  font-size: calc(1.2 * var(--font-size));
+  line-height: calc(1.5 * var(--font-size));
+  font-family: var(--font-Acme);
+  padding: calc(0.5 * var(--basic-size)) calc(2 * var(--basic-size));
+  border-radius: calc(2 * var(--basic-size));
+  border: 2px solid;
+  margin-bottom: calc(2 * var(--basic-size));
+}
+main section.banner .left .block {
+  height: calc(28 * var(--basic-size));
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(1 * var(--basic-size));
+  box-sizing: border-box;
+}
+main section.banner .left .block p {
+  font-size: calc(1.2 * var(--font-size));
+  line-height: calc(1.4 * var(--font-size));
+  color: var(--color-black);
+  overflow: hidden;
+}
+main section.banner .right {
+  flex: 1;
+  height: calc(84 * var(--basic-size));
+  background: var(--color-primary);
+}
+main section.banner .right .title {
+  height: calc(28 * var(--basic-size));
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+main section.banner .right .title p {
+  font-size: calc(1.5 * var(--font-size));
+  line-height: calc(2 * var(--font-size));
+  font-family: var(--font-Acme);
+}
+main section.banner .right .title p a {
+  color: var(--color-white);
+}
+main section.banner .right .chunk {
+  display: flex;
+}
+main section.banner .right .chunk .block {
+  height: calc(28 * var(--basic-size));
+  width: 80%;
+  background: var(--color-white);
+}
+main section.banner .right .menu {
+  height: calc(28 * var(--basic-size));
+}
+main section.desc {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(-16 * var(--font-size));
+  width: calc(25 * var(--font-size));
+  font-size: calc(2 * var(--font-size));
+  line-height: calc(3 * var(--font-size));
+  text-transform: uppercase;
+}
+main section.desc:hover {
+  background-image: linear-gradient(to right, hotpink);
+  animation: sliding 100s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main section.chapter {
+  margin-top: calc(10 * var(--basic-size));
+  padding: 0 calc(2 * var(--basic-size));
+}
+main section.chapter article p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.75 * var(--font-size));
+}
+main section .square {
+  width: calc(6 * var(--basic-size));
+  height: calc(6 * var(--basic-size));
+  background: var(--color-primary);
+}
+main section.chapter1 .container {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+}
+main section.chapter1 .container article {
+  margin: calc(5 * var(--basic-size)) 0;
+}
+main section.chapter1 .container article p {
+  text-align: center;
+}
+main section.chapter1 .container .left {
+  width: 40%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+}
+main section.chapter1 .container .left .item {
+  display: flex;
+  justify-content: space-between;
+}
+main section.chapter1 .container .left article {
+  padding: 0 10%;
+}
+main section.chapter1 .container .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(8 * var(--basic-size));
+}
+main section.chapter1 .container .right .item {
+  display: flex;
+  justify-content: space-between;
+}
+main section.chapter1 .container .right article {
+  padding: 0 10%;
+}
+main section.chapter2 article {
+  width: 80%;
+  margin: 0 auto;
+}
+main section.chapter2 article p {
+  padding: calc(3 * var(--basic-size)) calc(5 * var(--basic-size));
+  border: calc(1 * var(--basic-size)) solid var(--color-primary);
+}
+main section.chapter3 article {
+  width: calc(25 * var(--font-size));
+  position: relative;
+}
+main section.chapter3 article p {
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(2 * var(--font-size));
+}
+main section.chapter3 article ul {
+  position: absolute;
+  display: flex;
+  z-index: -1;
+}
+main section.chapter3 article ul.row1 {
+  left: 0;
+  top: -10px;
+}
+main section.chapter3 article ul.row2 {
+  right: 0;
+  bottom: -10px;
+  justify-content: flex-end;
+}
+main section.chapter3 article ul li {
+  width: calc(4 * var(--basic-size));
+  height: calc(4 * var(--basic-size));
+  background: var(--color-primary);
+  transform: rotate(45deg);
+}
+main section.chapter3 article ul li:nth-child(2) {
+  margin: 0 calc(1.5 * var(--basic-size));
+}
+main section.chapter4 article {
+  display: flex;
+  justify-content: flex-end;
+}
+main section.chapter4 article p {
+  width: 100%;
+}
+main section.chapter5 article {
+  display: flex;
+}
+main section.chapter5 article p {
+  width: 90%;
+  font-weight: calc(1.5 * var(--font-weight));
+  font-size: calc(3 * var(--font-size));
+  line-height: calc(4.5 * var(--font-size));
+  text-transform: uppercase;
+  transition: 1s;
+}
+main section.chapter5 article p:hover {
+  transform: skewX(-2deg) translate(-20px, -20px);
+  background-image: linear-gradient(to left, hotpink);
+  animation: sliding 100s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main section.chapter6 article {
+  width: 80%;
+  position: relative;
+}
+main section.chapter6 article p {
+  padding: calc(3 * var(--basic-size)) calc(5 * var(--basic-size));
+  border: calc(1 * var(--basic-size)) solid var(--color-primary);
+  background: var(--color-white);
+}
+main section.chapter6 article .square {
+  position: absolute;
+}
+main section.chapter6 article .square.one {
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+main section.chapter6 article .square.two {
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
+main section.chapter6 article .square.three {
+  right: 0;
+  bottom: 0;
+  width: calc(10 * var(--basic-size));
+  height: calc(10 * var(--basic-size));
+  transform: translate(50%, 50%);
+  z-index: -1;
+}
+main section.chapter6 article .square.four {
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+main section.chapter7 {
+  margin-top: calc(20 * var(--basic-size));
+  display: flex;
+  justify-content: space-between;
+}
+main section.chapter7 article {
+  width: 70%;
+}
+main section.chapter7 .right {
+  display: flex;
+  align-items: flex-end;
+}
+main section.chapter7 .right .square {
+  width: calc(8 * var(--basic-size));
+  height: calc(8 * var(--basic-size));
+}
+main section.chapter8 {
+  display: flex;
+  justify-content: space-between;
+}
+main section.chapter8 .left {
+  display: flex;
+}
+main section.chapter8 .left .square {
+  width: calc(12 * var(--basic-size));
+  height: calc(12 * var(--basic-size));
+}
+main section.chapter8 article {
+  width: 70%;
+}
+main section.chapter9 {
+  margin-top: calc(10 * var(--basic-size));
+}
+main section.chapter9 article {
+  width: 80%;
+  margin: 0 auto;
+}
+main section.chapter9 article p {
+  padding: calc(4 * var(--basic-size));
+  background: var(--color-primary);
+  font-size: calc(1.25 * var(--font-size));
+  line-height: calc(1.75 * var(--font-size));
+}
+main section.chapter10 {
+  display: flex;
+  justify-content: flex-end;
+}
+main section.chapter10 article {
+  width: 80%;
+  position: relative;
+}
+main section.chapter10 article p {
+  padding: calc(4 * var(--basic-size));
+}
+main section.chapter10 article .square2 {
+  width: calc(30 * var(--basic-size));
+  height: calc(30 * var(--basic-size));
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: calc(1 * var(--basic-size)) solid var(--color-primary);
+  transform: translate(-20%, -20%);
+  opacity: 0.4;
+}
+main section.chapter10 article .bg {
+  width: calc(20 * var(--basic-size));
+  height: calc(20 * var(--basic-size));
+  background: var(--color-primary);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: translateY(30%);
+}
+main section.chapter11 {
+  margin-top: calc(15 * var(--basic-size));
+  margin-bottom: calc(20 * var(--basic-size));
+  display: flex;
+  justify-content: flex-end;
+}
+main section.chapter11 article {
+  width: 70%;
+}
+main section.chapter11 article p {
+  font-weight: calc(1.5 * var(--font-weight));
+}
+main .divide {
+  margin: calc(5 * var(--basic-size)) 0;
+  height: calc(1 * var(--basic-size));
+  width: 100%;
+  background: var(--color-primary);
+}
+
+.spinner {
+  --first-block-clr: var(--color-primary);
+}
+
+@keyframes sliding {
+  to {
+    background-position: -2000vw;
+  }
+}
+
+/* 768px */
+@media screen and (min-width: 768px) {
+  :root {
+    --font-size: 16px;
+  }
+  main section.banner h1 {
+    font-size: calc(3 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(28 * var(--basic-size));
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .left {
+    flex: initial;
+    width: calc(28 * var(--basic-size));
+  }
+  main section.banner .left .block {
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .left .block p {
+    font-size: calc(1.2 * var(--font-size));
+    line-height: calc(1.2 * var(--font-size));
+  }
+  main section.banner .right {
+    height: calc(84 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .right .chunk .block {
+    width: calc(28 * var(--basic-size));
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .right .menu {
+    height: calc(28 * var(--basic-size));
+  }
+  main section.banner .right .menu p a {
+    font-size: calc(1.4 * var(--font-size));
+    line-height: calc(1.6 * var(--font-size));
+  }
+  main section.desc {
+    width: calc(40 * var(--font-size));
+    font-size: calc(3 * var(--font-size));
+    line-height: calc(4.5 * var(--font-size));
+  }
+  main section.chapter {
+    padding: 0 calc(4 * var(--basic-size));
+  }
+}
+
+/* 992px */
+@media screen and (min-width: 992px) {
+  :root {
+    --font-size: 18px;
+  }
+  main section.banner h1 {
+    font-size: calc(4 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(38 * var(--basic-size));
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .left {
+    width: calc(38 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .left .block {
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .left .block p {
+    font-size: calc(1.4 * var(--font-size));
+    line-height: calc(1.5 * var(--font-size));
+  }
+  main section.banner .right {
+    height: calc(114 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    width: 100%;
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .right .chunk .block {
+    width: calc(38 * var(--basic-size));
+    height: calc(38 * var(--basic-size));
+  }
+  main section.banner .right .menu {
+    height: calc(38 * var(--basic-size));
+  }
+  main section.desc {
+    width: calc(47 * var(--font-size));
+    font-size: calc(4 * var(--font-size));
+    line-height: calc(5.5 * var(--font-size));
+  }
+  main section.chapter {
+    padding: 0 calc(6 * var(--basic-size));
+  }
+  main section.chapter4 article p {
+    width: 50%;
+  }
+  main section.chapter6 article .square.three {
+    width: calc(20 * var(--basic-size));
+    height: calc(20 * var(--basic-size));
+  }
+  main section.chapter7 .right .square {
+    width: calc(14.5 * var(--basic-size));
+    height: calc(14.5 * var(--basic-size));
+  }
+  main section.chapter9 article p {
+    padding: calc(4 * var(--basic-size));
+    background: var(--color-primary);
+  }
+  main section .chapter10 article .square2 {
+    width: calc(40 * var(--basic-size));
+    height: calc(40 * var(--basic-size));
+    border: calc(2 * var(--basic-size)) solid var(--color-primary);
+  }
+  main section .chapter10 article .bg {
+    width: calc(20 * var(--basic-size));
+    height: calc(20 * var(--basic-size));
+  }
+  main .divide {
+    height: calc(2 * var(--basic-size));
+  }
+}
+
+/* 1280px */
+@media screen and (min-width: 1280px) {
+  :root {
+    --font-size: 20px;
+  }
+  main section.banner h1 {
+    font-size: calc(4 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(48.4 * var(--basic-size));
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .left {
+    width: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .left .block {
+    height: calc(48.4 * var(--basic-size));
+    padding: calc(2 * var(--basic-size));
+  }
+  main section.banner .right {
+    height: calc(145.2 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .right .chunk .block {
+    width: calc(48.4 * var(--basic-size));
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.banner .right .menu {
+    height: calc(48.4 * var(--basic-size));
+  }
+  main section.desc {
+    width: calc(47 * var(--font-size));
+    font-size: calc(4.5 * var(--font-size));
+    line-height: calc(6 * var(--font-size));
+  }
+  main section.chapter {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter2 article p {
+    border: calc(2 * var(--basic-size)) solid var(--color-primary);
+  }
+}
+
+/* 1720px */
+@media screen and (min-width: 1720px) {
+  :root {
+    --font-size: 24px;
+  }
+  main section.banner h1 {
+    font-size: calc(4 * var(--font-size));
+  }
+  main section.banner .block {
+    width: calc(60 * var(--basic-size));
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .left {
+    width: calc(60 * var(--basic-size));
+  }
+  main section.banner .left .title {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .left .block {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .right {
+    height: calc(180 * var(--basic-size));
+  }
+  main section.banner .right .title {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .right .chunk .block {
+    width: calc(60 * var(--basic-size));
+    height: calc(60 * var(--basic-size));
+  }
+  main section.banner .right .menu {
+    height: calc(60 * var(--basic-size));
+  }
+  main section.desc {
+    width: calc(47 * var(--font-size));
+    font-size: calc(4.5 * var(--font-size));
+    line-height: calc(6 * var(--font-size));
+  }
+  main section.chapter {
+    padding: 0 calc(8 * var(--basic-size));
+  }
+  main section.chapter2 article p {
+    border: calc(2 * var(--basic-size)) solid var(--color-primary);
+  }
+}
