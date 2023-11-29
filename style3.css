@@ -368,12 +368,6 @@ main .divide {
   --first-block-clr: var(--color-primary);
 }
 
-@-webkit-keyframes sliding {
-  to {
-    background-position: -2000vw;
-  }
-}
-
 @keyframes sliding {
   to {
     background-position: -2000vw;
