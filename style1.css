@@ -408,7 +408,7 @@ main section.chapter5 .line.eight {
 }
 
 main section.chapter5 .line.eight p {
-  width: calc(30 * var(--font-size));
+  width: calc(28 * var(--font-size));
   padding: calc(3 * var(--basic-size));
   padding-right: calc(6 * var(--basic-size));
   background: var(--color-primary);
@@ -416,9 +416,9 @@ main section.chapter5 .line.eight p {
   box-sizing: border-box;
 }
 
-main section.chapter5 .line.eight p {
+/* main section.chapter5 .line.eight p {
   width: calc(28 * var(--font-size));
-}
+} */
 
 main section.chapter5 .line.eight p:hover {
   border-radius: calc(5 * var(--basic-size));
