@@ -399,6 +399,10 @@ main section.chapter5 .line.six p, main section.chapter5 .line.seven p, main sec
   line-height: calc(1.75 * var(--font-size));
 }
 
+main section.chapter5 .line.seven p {
+  width: calc(30 * var(--font-size));
+}
+
 main section.chapter5 .line.eight {
   justify-content: flex-end;
 }
@@ -410,10 +414,6 @@ main section.chapter5 .line.eight p {
   background: var(--color-primary);
   color: var(--color-white);
   box-sizing: border-box;
-}
-
-main section.chapter5 .line.seven p {
-  width: calc(30 * var(--font-size));
 }
 
 main section.chapter5 .line.eight p {
