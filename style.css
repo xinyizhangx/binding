@@ -65,7 +65,7 @@ main section .right .block {
   border: 2px solid;
   position: relative;
   animation-name: changeBg;
-  animation-duration: 8s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
