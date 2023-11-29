@@ -1,6 +1,5 @@
 
 @import url(common.css);
-
 :root {
   --color-primary: #ffb1d4;
 }
@@ -18,12 +17,17 @@ main section.banner h1 {
   top: calc(5 * var(--basic-size));
   left: 0;
   width: 100%;
-  font-family: var(--font-Silkscreen);
+  font-family: var(--font-InknutAntiqua);
   text-align: center;
   text-shadow: calc(var(--basic-size)) calc(-1 * var(--basic-size)) calc(var(--basic-size)) rgba(0, 0, 0, 0.3);
   font-size: calc(2 * var(--font-size));
   line-height: calc(5 * var(--font-size));
 }
+
+main section.banner h1 p.line2 {
+  font-family: var(--font-Spirax);
+}
+
 main section.banner h1 p {
   padding: 0 20%;
   text-align: center;
@@ -108,9 +112,11 @@ main section.desc {
   text-transform: uppercase;
 }
 main section.desc:hover {
-  background-image: linear-gradient(to right, hotpink);
-  animation: sliding 100s linear infinite;
+  background-image: linear-gradient(to right, orangered, orange, gold, lightgreen, cyan, dodgerblue, mediumpurple, hotpink, orangered);
+  -webkit-animation: sliding 100s linear infinite;
+          animation: sliding 100s linear infinite;
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 main section.chapter {
@@ -222,9 +228,11 @@ main section.chapter5 article p {
 }
 main section.chapter5 article p:hover {
   transform: skewX(-2deg) translate(-20px, -20px);
-  background-image: linear-gradient(to left, hotpink);
-  animation: sliding 100s linear infinite;
+  background-image: linear-gradient(to left, orange, lightgreen, hotpink);
+  -webkit-animation: sliding 100s linear infinite;
+          animation: sliding 100s linear infinite;
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 main section.chapter6 article {
@@ -357,6 +365,12 @@ main .divide {
 
 .spinner {
   --first-block-clr: var(--color-primary);
+}
+
+@-webkit-keyframes sliding {
+  to {
+    background-position: -2000vw;
+  }
 }
 
 @keyframes sliding {
