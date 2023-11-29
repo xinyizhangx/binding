@@ -1,5 +1,6 @@
 
 @import url(common.css);
+
 :root {
   --color-primary: #ffb1d4;
 }
@@ -20,7 +21,7 @@ main section.banner h1 {
   font-family: var(--font-InknutAntiqua);
   text-align: center;
   text-shadow: calc(var(--basic-size)) calc(-1 * var(--basic-size)) calc(var(--basic-size)) rgba(0, 0, 0, 0.3);
-  font-size: calc(2 * var(--font-size));
+  font-size: calc(3 * var(--font-size));
   line-height: calc(5 * var(--font-size));
 }
 
@@ -511,7 +512,7 @@ main .divide {
     --font-size: 20px;
   }
   main section.banner h1 {
-    font-size: calc(4 * var(--font-size));
+    font-size: calc(5 * var(--font-size));
   }
   main section.banner .block {
     width: calc(48.4 * var(--basic-size));
@@ -559,7 +560,7 @@ main .divide {
     --font-size: 24px;
   }
   main section.banner h1 {
-    font-size: calc(4 * var(--font-size));
+    font-size: calc(5 * var(--font-size));
   }
   main section.banner .block {
     width: calc(60 * var(--basic-size));
