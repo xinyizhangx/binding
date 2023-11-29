@@ -90,29 +90,6 @@ main section .right .block .word.three {
   left: 0;
 }
 
-@-webkit-keyframes changeBg {
-  0% {
-    background-color: #000;
-    border-color: #000;
-  }
-  25% {
-    background-color: #70a9ff;
-    border-color: #70a9ff;
-  }
-  50% {
-    background-color: #00dfa2;
-    border-color: #00dfa2;
-  }
-  75% {
-    background-color: #ffb1d4;
-    border-color: #ffb1d4;
-  }
-  100% {
-    background-color: #000;
-    border-color: #000;
-  }
-}
-
 @keyframes changeBg {
   0% {
     background-color: #000;
