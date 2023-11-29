@@ -64,14 +64,10 @@ main section .right .block {
   width: 80%;
   border: 2px solid;
   position: relative;
-  -webkit-animation-name: changeBg;
-          animation-name: changeBg;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: changeBg;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 main section .right .block .word {
   position: absolute;
