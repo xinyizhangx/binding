@@ -416,10 +416,6 @@ main section.chapter5 .line.eight p {
   box-sizing: border-box;
 }
 
-/* main section.chapter5 .line.eight p {
-  width: calc(28 * var(--font-size));
-} */
-
 main section.chapter5 .line.eight p:hover {
   border-radius: calc(5 * var(--basic-size));
   transition: 1.5s;
