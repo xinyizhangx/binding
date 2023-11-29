@@ -23,8 +23,15 @@ main section.banner h1 {
   line-height: calc(5 * var(--font-size));
 }
 main section.banner h1 p {
+  font-family:var(--font-Habibi) ;
   padding: 0 20%;
 }
+
+main section.banner h1 .line2 {
+  font-family:var(--font-Spirax) ;
+  padding: 0 20%;
+}
+
 main section.banner h1 p.line2 {
   text-align: right;
 }
